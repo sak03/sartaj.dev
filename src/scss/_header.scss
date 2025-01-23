@@ -1,23 +1,23 @@
 /* Mobile Stye */
 @media (max-width: 767px) {
     .brand-name {
-        font-size: 18px;
-        color: red;
+        font-size: 28px;
+        color: $light-theme-text;
     }
 }
 
 /* Tablet Styel */
 @media (min-width: 768px) and (max-width: 1024px) {
     .brand-name {
-        font-size: 18px;
-        color: blue;
+        font-size: 38px;
+        color: $light-theme-text;
     }
 }
 
 /* Desktop Styele*/
 @media (min-width: 1025px) {
     .brand-name {
-        font-size: 18px;
-        color: yellow;
+        font-size: 48px;
+        color: $light-theme-text;
     }
 }
