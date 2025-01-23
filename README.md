@@ -1,11 +1,11 @@
 # Portfolio
 My complete Web Development journey.
 
-## Tech Stack
+### Tech Stack
 1. [Next.js](https://nextjs.org/ "Next.js")  
 2. [Bootstrap](https://getbootstrap.com/ "Bootstrap")
 
-## Steps to Run the Code
+### Steps to Run the Code
 1. Clone the repository:
    ```bash
    git clone https://github.com/sak03/sartaj.dev.git 
@@ -18,5 +18,4 @@ My complete Web Development journey.
    ```bash
    npm run dev
 
-## Steps to Run the Code
-2. [Sartaj](https://sak03.github.io/sartaj.dev/  "Sartaj")
+This portfolio is live. Please [Click_Here](https://sak03.github.io/sartaj.dev/  "Sartaj") .
