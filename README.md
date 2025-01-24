@@ -4,6 +4,9 @@ My complete Web Development journey.
 ### Tech Stack
 1. [Next.js](https://nextjs.org/ "Next.js")  
 2. [Bootstrap](https://getbootstrap.com/ "Bootstrap")
+3. [SCSS](https://sass-lang.com/ "SASS")
+4. [React Icons](https://react-icons.github.io/react-icons/icons/fa/ "React Icons")
+
 
 ### Steps to Run the Code
 1. Clone the repository:

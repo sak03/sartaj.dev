@@ -2,7 +2,7 @@
 @media (max-width: 767px) {
     .brand-name {
         font-size: 28px;
-        color: $light-theme-text;
+        color: $theme-dark-text;
     }
 }
 
@@ -10,14 +10,50 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     .brand-name {
         font-size: 38px;
-        color: $light-theme-text;
+        color: $theme-dark-text;
     }
 }
 
 /* Desktop Styele*/
 @media (min-width: 1025px) {
-    .brand-name {
-        font-size: 48px;
-        color: $light-theme-text;
+    .brand-name .brand-name1 {
+        font-size: 40px;
+        color: $theme-dark-text;
+        padding: 2px 10px;
+    }
+
+    .brand-name .brand-name2 {
+        font-size: 40px;
+        color: $light-text;
+        background-color: $theme-dark-text;
+        padding: 2px 10px;
+    }
+
+    .header-item {
+        font-size: 24px;
+        color: $dark-text;
+        padding: 2px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .header-item:hover {
+        font-size: 24px;
+        color: $light-text;
+        background-color: $theme-dark-text;
+        padding: 2px 20px;
+        border-radius: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .header-item-active {
+        font-size: 24px;
+        color: $light-text;
+        background-color: $theme-dark-text;
+        padding: 2px 20px;
+        border-radius: 30px;
+        margin-top: 10px;
+        cursor: pointer;
     }
 }

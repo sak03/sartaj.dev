@@ -2,17 +2,15 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='px-3 py-2 flex justify-between bg-white'>
-      <div >
-        <h3 className='brand-name'>Sartaj Alam</h3>
-      </div>
-      <div className='flex'>
-        <span>Home</span>
-        <span>About</span>
-        <span>Work</span>
-        <span>Skills</span>
-        <span>Projects</span>
-        <span>Contact</span>
+    <div className='px-5 py-1 flex justify-between bg-white'>
+      <h3 className='pointer brand-name'><span className='brand-name1'>SARTAJ</span> <span className='brand-name2'>ALAM</span></h3>
+      <div className='flex my-1'>
+        <span className='header-item-active'>Home</span>
+        <span className='header-item mx-4'>About</span>
+        <span className='header-item'>Work</span>
+        <span className='header-item mx-4'>Skills</span>
+        <span className='header-item'>Projects</span>
+        <span className='header-item mx-4'>Contact</span>
       </div>
     </div>
   )
