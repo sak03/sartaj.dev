@@ -1,0 +1,44 @@
+/* Mobile Stye */
+@media (max-width: 767px) {
+    .landing-section {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 80px;
+    }
+
+    .landing-title-section {
+        color: $dark-text;
+        padding: 20px 30px;
+    }
+}
+
+/* Tablet Styel */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .landing-section {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 80px;
+    }
+
+        .landing-title-section {
+            color: $dark-text;
+            padding: 20px 30px;
+        }
+}
+
+/* Desktop Styele*/
+@media (min-width: 1025px) {
+    .landing-section {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 80px;
+    }
+
+        .landing-title-section {
+            color: $dark-text;
+            padding: 30px 50px;
+        }
+}

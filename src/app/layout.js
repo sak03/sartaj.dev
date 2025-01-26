@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
                     <div style={{position:"fixed", top:"0", width:"100vw"}}>
                         <Header />
                     </div>
-                    <div>
+                    <div style={{marginTop:"5rem"}}>
                         {children}
                         <Footer />
                     </div>
