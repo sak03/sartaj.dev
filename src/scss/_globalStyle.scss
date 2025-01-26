@@ -1,3 +1,11 @@
 .pointer{
     cursor: pointer;
 }
+
+.dark-bg{
+    background-color: $theme-dark-text !important;
+}
+
+.light-bg{
+    background-color: $theme-light-text !important;
+}

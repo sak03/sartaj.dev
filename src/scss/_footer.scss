@@ -3,8 +3,27 @@
     font-size: 24px;
 }
 
+.footer-sub-item {
+    color: $dark-text;
+    font-size: 14px;
+}
+
+.footer-sub-item-icon {
+    color: $dark-text;
+    font-size: 24px;
+}
+
+.footer-sub-item-icon a:hover {
+    color: $theme-dark-text;
+    font-size: 24px;
+}
+
 .footer-line{
     height: 1px;
     background-color: lightgray;
-    margin: 3px 0px;
+    margin: 1px 0px;
+}
+
+.footer-bottom{
+        color: $dark-text;
 }
