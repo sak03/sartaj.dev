@@ -6,6 +6,7 @@ My complete Web Development journey.
 2. [Bootstrap](https://getbootstrap.com/ "Bootstrap")
 3. [SCSS](https://sass-lang.com/ "SASS")
 4. [React Icons](https://react-icons.github.io/react-icons/icons/fa/ "React Icons")
+5. [React_Simple_Typewriter](https://react-simple-typewriter.vercel.app/?path=/story/introduction--page, "React Simple Typewriter")
 
 
 ### Steps to Run the Code
