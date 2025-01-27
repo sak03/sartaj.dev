@@ -5,6 +5,10 @@ import Image from 'next/image';
 import { Typewriter } from "react-simple-typewriter";
 
 const Landing = () => {
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+    }
+
   return (
       <div className='landing-section'>
           <div><Image src={landingImg} width={600} height={400} alt='landing image'/> </div>
@@ -13,12 +17,14 @@ const Landing = () => {
               <h1 className="text-3xl font-bold">
                   <Typewriter
                       words={["Hi, I'm Sartaj Alam."]}
-                      loop={false} // Set to true if you want the effect to loop
+                      loop={1} // Set to true if you want the effect to loop
                       cursor
-                      cursorStyle="_"
-                      typeSpeed={70} // Typing speed in ms
-                      deleteSpeed={50} // Deleting speed in ms
+                      cursorStyle="|"
+                      typeSpeed={150} // Typing speed in ms
+                      deleteSpeed={150} // Deleting speed in ms
                       delaySpeed={1000} // Delay before typing starts again
+                      onLoopDone={handleDone}
+                      onTypeEnd={() => console.log("typing ended2")}
                   />
               </h1>
               <div>
