@@ -112,11 +112,11 @@ export default function RootLayout({ children }) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <div>
-                    <div style={{position:"fixed", top:"0", width:"100vw"}}>
+                <div className="layout-body">
+                    <div className="layout-header">
                         <Header />
                     </div>
-                    <div style={{marginTop:"5rem"}}>
+                    <div className="layout-section">
                         {children}
                         <Footer />
                     </div>

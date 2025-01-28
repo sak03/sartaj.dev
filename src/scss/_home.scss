@@ -2,14 +2,41 @@
 @media (max-width: 767px) {
     .landing-section {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         background-color: #fff;
-        padding: 10px 80px;
+        padding: 10px 10px;
     }
 
-    .landing-title-section {
+    .landing-section1 {
+        width: 100%;
+    }
+
+    .landing-section2 {
+        width: 100%;
         color: $dark-text;
-        padding: 20px 30px;
+        padding: 30px 10px;
+    }
+
+    .landing-section2 h1 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .resume-download {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        background-color: $theme-dark-text;
+        color: #fff;
+    }
+
+    .email-me {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
+        margin-left: 20px;
     }
 }
 
@@ -22,10 +49,37 @@
         padding: 10px 80px;
     }
 
-        .landing-title-section {
-            color: $dark-text;
-            padding: 20px 30px;
-        }
+    .landing-section1 {
+        width: 35%;
+    }
+
+    .landing-section2 {
+        width: 65%;
+        color: $dark-text;
+        padding: 30px 10px;
+    }
+
+    .landing-section2 h1 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .resume-download {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        background-color: $theme-dark-text;
+        color: #fff;
+    }
+
+    .email-me {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
+        margin-left: 20px;
+    }
 }
 
 /* Desktop Styele*/
@@ -37,8 +91,53 @@
         padding: 10px 80px;
     }
 
-        .landing-title-section {
-            color: $dark-text;
-            padding: 30px 50px;
-        }
+    .landing-section1 {
+        width: 40%;
+    }
+
+    .landing-section2 {
+        width: 60%;
+        color: $dark-text;
+        padding: 30px 50px;
+    }
+
+    .landing-section2 h1 {
+        font-size: 44px;
+        font-weight: 500;
+    }
+
+    .resume-download {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        background-color: $theme-dark-text;
+        color: #fff;
+    }
+
+    .resume-download:hover {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        background-color: $theme-light-text;
+        color: #fff;
+    }
+
+    .email-me {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
+        margin-left: 20px;
+    }
+
+    .email-me:hover {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: #fff;
+                background-color: $theme-light-text;
+        border: $theme-dark-text solid;
+        margin-left: 20px;
+    }
 }

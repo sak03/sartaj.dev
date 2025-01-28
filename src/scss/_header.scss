@@ -51,9 +51,16 @@
         color: $theme-dark-text;
     }
 
-    .header-hamberger {
+
+    .header-item-div {
         display: none;
     }
+
+    .hamberger {
+        color: $theme-dark-text;
+        font-size: 28px;
+    }
+
 }
 
 /* Desktop Styele*/
