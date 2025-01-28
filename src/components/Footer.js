@@ -10,7 +10,7 @@ const Footer = () => {
           <h3 className='footer-item'>Sartaj Alam</h3>
           <p className='footer-sub-item'>Your complete web solutions</p>
         </div>
-        <div className='m3-3'>
+        <div className='mt-3'>
           <h3 className='footer-item'>Expert In</h3>
           <p className='footer-sub-item'>Front End, Full Stack</p>
           <p className='footer-sub-item'>MERN Stack</p>

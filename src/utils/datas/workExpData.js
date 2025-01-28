@@ -8,6 +8,7 @@ export const workData = [
         stDate:"Jul, 2023",
         endDate: "Jan, 2025",
         shortDescription:"Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
+        longDescription:"",
     },
     {
         id: "we02",
@@ -18,6 +19,7 @@ export const workData = [
         stDate: "Mar, 2022",
         endDate: "Jun, 2023",
         shortDescription: "Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
+        longDescription: "",
     },
     {
         id: "we03",
@@ -28,5 +30,6 @@ export const workData = [
         stDate: "Aug, 2021",
         endDate: "Feb, 2022",
         shortDescription: "Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
+        longDescription: "",
     },
 ]

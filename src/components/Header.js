@@ -17,11 +17,11 @@ const Header = () => {
         <Link href={'/work'}>
           <span className={`header-item${pathName === '/work' ? "-active" : ""} flex`}><FaBriefcase className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Work</span>
         </Link>
-        <Link href={'/skills'}>
-          <span className={`header-item${pathName === '/skills' ? "-active" : ""} mx-1 flex`}><FaCogs className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Skills</span>
-        </Link>
         <Link href={'/projects'}>
           <span className={`header-item${pathName === '/projects' ? "-active" : ""} flex`}><FaFileSignature className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Projects</span>
+        </Link>
+        <Link href={'/skills'}>
+          <span className={`header-item${pathName === '/skills' ? "-active" : ""} mx-1 flex`}><FaCogs className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Skills</span>
         </Link>
         <Link href={'/about'}>
           <span className={`header-item${pathName === '/about' ? "-active" : ""} mx-1 flex`}><FaUserAlt className='mt-2 mx-1' style={{ fontSize: "20px" }} /> About</span>
