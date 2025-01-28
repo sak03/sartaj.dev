@@ -38,6 +38,47 @@
         border: $theme-dark-text solid;
         margin-left: 20px;
     }
+
+    // work experience style
+    .work-body {
+        background-color: rgb(245, 243, 243);
+        padding: 20px 20px;
+    }
+
+    .work-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $theme-light-text;
+    }
+
+    .work-subtitle {
+        font-size: 28px;
+        font-weight: 500;
+        color: $theme-dark-text;
+    }
+
+    .exp-count {
+        font-size: 124px;
+        color: gray;
+        font-weight: 900;
+    }
+
+    .exp-title {
+        font-size: 24px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .work-card-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work-card {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 /* Tablet Styel */
@@ -136,8 +177,49 @@
         padding: 10px 15px;
         border-radius: 6px;
         color: #fff;
-                background-color: $theme-light-text;
+        background-color: $theme-light-text;
         border: $theme-dark-text solid;
         margin-left: 20px;
+    }
+
+    // work experience style
+    .work-body {
+        background-color: rgb(245, 243, 243);
+        padding: 20px 80px;
+    }
+
+    .work-title {
+        font-size: 24px;
+        font-weight: 500;
+        color: $theme-light-text;
+    }
+
+    .work-subtitle {
+        font-size: 38px;
+        font-weight: 500;
+        color: $theme-dark-text;
+    }
+
+    .exp-count {
+        font-size: 124px;
+        color: gray;
+        font-weight: 900;
+    }
+
+    .exp-title {
+        font-size: 34px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .work-card-body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work-card {
+        width: 33%;
+        padding: 10px;
     }
 }
