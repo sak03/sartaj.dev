@@ -3,12 +3,20 @@ import React from 'react'
 import { personalProjectsData } from '@/utils/datas/projectsData'
 import Image from 'next/image'
 import imgVal from '../../assets/projects/personal/tictactoe.png'
+import Link from 'next/link'
+import { FiChevronsRight } from 'react-icons/fi'
 
 const HomeProjects = () => {
   
   return (
     <div className='home-project-body'>
-      <h5 className='home-project-title'>PROJECTS</h5>
+
+      <div className='flex justify-between'>
+        <h5 className='home-project-title'>PROJECTS</h5>
+        <Link href={'projects'} >
+          <span className='text-black flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
+        </Link>
+      </div>
       <h3 className='home-project-subtitle'>My Free Time Projects</h3>
       <div className='home-project-card-body'>
         {personalProjectsData?.map((item) => (

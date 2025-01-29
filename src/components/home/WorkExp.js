@@ -1,11 +1,18 @@
 import React from 'react'
-import { workData } from "@/utils/datas/workExpData"
+import { workData } from "@/utils/datas/workExpData";
+import { FiChevronsRight } from "react-icons/fi";
+import Link from 'next/link';
 
 const WorkExp = () => {
     console.log("workData", workData)
     return (
         <div className='work-body'>
-            <h5 className='work-title'>WORK EXPERIENCES</h5>
+            <div className='flex justify-between'>
+                <h5 className='work-title'>WORK EXPERIENCES</h5>
+                <Link href={'work-experience'} >
+                    <span className='text-black flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
+                </Link>
+            </div>
             <h3 className='work-subtitle'>Companies I worked for</h3>
             <div className='work-card-body'>
                 {workData?.map((item) => (

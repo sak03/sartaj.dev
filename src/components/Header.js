@@ -14,8 +14,8 @@ const Header = () => {
       <div className='flex my-2 header-item-div'>
         <Link href={'/'}>
           <span className={`header-item${pathName === '/' ? "-active" : ""} flex`}> <FaHome className='mt-1 mx-1' style={{ fontSize: "23px" }} /> Home </span></Link>
-        <Link href={'/work'}>
-          <span className={`header-item${pathName === '/work' ? "-active" : ""} flex`}><FaBriefcase className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Work</span>
+        <Link href={'/work-experience'}>
+          <span className={`header-item${pathName === '/work-experience' ? "-active" : ""} flex`}><FaBriefcase className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Work</span>
         </Link>
         <Link href={'/projects'}>
           <span className={`header-item${pathName === '/projects' ? "-active" : ""} flex`}><FaFileSignature className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Projects</span>

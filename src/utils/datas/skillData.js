@@ -16,4 +16,28 @@ export const frontEndSkills = [
         smallImgUrl: smallReactImg,
         largeImgUrl: "",
     },
+    {
+        id: "fes03",
+        name: "JavaScript",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes04",
+        name: "TypeScript",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes05",
+        name: "Redux",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes06",
+        name: "Context API",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
 ]
