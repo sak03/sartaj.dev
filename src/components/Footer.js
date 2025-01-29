@@ -17,8 +17,8 @@ const Footer = () => {
         </div>
         <div className='mt-3'>
           <h3 className='footer-item'>Important Links</h3>
-          <p className='footer-sub-item'>About</p>
-          <p className='footer-sub-item'>Work</p>
+          <p className='footer-sub-item'>Work, Projects</p>
+          <p className='footer-sub-item'>Skills, About, Contact</p>
         </div>
         <div className='mt-3'>
           <h3 className='footer-item'>Follow me</h3>

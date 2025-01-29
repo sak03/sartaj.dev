@@ -26,8 +26,8 @@ const Header = () => {
         <Link href={'/about'}>
           <span className={`header-item${pathName === '/about' ? "-active" : ""} mx-1 flex`}><FaUserAlt className='mt-2 mx-1' style={{ fontSize: "20px" }} /> About</span>
         </Link>
-        <Link href={'/contacts'}>
-          <span className={`header-item${pathName === '/contacts' ? "-active" : ""} mx-1 flex`}><FaHeadphones className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Contats</span>
+        <Link href={'/contact'}>
+          <span className={`header-item${pathName === '/contact' ? "-active" : ""} mx-1 flex`}><FaHeadphones className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Contact</span>
         </Link>
       </div>
       <div className='header-hamberger'>

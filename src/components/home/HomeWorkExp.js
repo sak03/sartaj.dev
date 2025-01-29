@@ -3,7 +3,7 @@ import { workData } from "@/utils/datas/workExpData";
 import { FiChevronsRight } from "react-icons/fi";
 import Link from 'next/link';
 
-const WorkExp = () => {
+const HomeWorkExp = () => {
     console.log("workData", workData)
     return (
         <div className='work-body'>
@@ -28,4 +28,4 @@ const WorkExp = () => {
     )
 }
 
-export default WorkExp
+export default HomeWorkExp
