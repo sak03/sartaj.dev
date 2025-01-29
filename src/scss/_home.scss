@@ -24,7 +24,7 @@
 
     .resume-download {
         cursor: pointer;
-        padding: 10px 15px;
+        padding: 5px 10px;
         border-radius: 6px;
         background-color: $theme-dark-text;
         color: #fff;
@@ -32,11 +32,19 @@
 
     .email-me {
         cursor: pointer;
-        padding: 10px 15px;
+        padding: 5px 10px;
         border-radius: 6px;
         color: $theme-dark-text;
         border: $theme-dark-text solid;
-        margin-left: 20px;
+        margin: 0 10px;
+    }
+
+    .call-me {
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
     }
 
     // work experience style
@@ -195,7 +203,15 @@
         border-radius: 6px;
         color: $theme-dark-text;
         border: $theme-dark-text solid;
-        margin-left: 20px;
+        margin: 0 20px;
+    }
+
+    .call-me {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
     }
 }
 
@@ -245,7 +261,7 @@
         border-radius: 6px;
         color: $theme-dark-text;
         border: $theme-dark-text solid;
-        margin-left: 20px;
+        margin: 0 20px;
     }
 
     .email-me:hover {
@@ -255,7 +271,24 @@
         color: #fff;
         background-color: $theme-light-text;
         border: $theme-dark-text solid;
-        margin-left: 20px;
+        margin: 0 20px;
+    }
+
+    .call-me {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: $theme-dark-text;
+        border: $theme-dark-text solid;
+    }
+
+    .call-me:hover {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: #fff;
+        background-color: $theme-light-text;
+        border: $theme-dark-text solid;
     }
 
     // work experience style

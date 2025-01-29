@@ -29,6 +29,7 @@ const Landing = () => {
                 <div className='mt-5'>
                     <span className='resume-download'><a href='https://drive.google.com/file/d/11_B2NTzYyvlynrw9XSXtQIRMGbR8STKx/view' target='_blank'>MY RESUME</a></span>
                     <span className='email-me'>EMAIL ME</span>
+                    <span className='call-me'>CALL ME</span>
                 </div>
             </div>
         </div>
