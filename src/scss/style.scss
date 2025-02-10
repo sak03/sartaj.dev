@@ -1,11 +1,11 @@
-@use 'variables.scss';
+@import 'variables.scss';
 
-@use 'layout.scss';
+@import 'layout.scss';
 
-@use 'globalStyle.scss';
+@import 'globalStyle.scss';
 
-@use 'header.scss';
+@import 'header.scss';
 
-@use 'home.scss';
+@import 'home.scss';
 
-@use 'footer.scss';
+@import 'footer.scss';
