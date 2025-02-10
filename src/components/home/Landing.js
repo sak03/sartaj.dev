@@ -37,7 +37,7 @@ const Landing = () => {
                     <a
                         href="mailto:sartaj2394@gmail.com?subject=Want%20to%20work%20with%20us?&body=Hello%2C%20I%20would%20like%20to%20connect."
                     > <span className='email-me'>EMAIL ME</span></a>
-                    <a href="tel:+911234567890" className='show-in-mobile-view'>
+                    <a href="tel:+91 99585 64890" className='show-in-mobile-view'>
                         <span className='call-me'>CALL ME</span>
                     </a>
                     <span className='call-me show-in-desktop-view' onClick={copyMobileNoToClipboard}>CALL ME</span>

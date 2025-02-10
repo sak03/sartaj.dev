@@ -22,7 +22,7 @@
 /* Mobile Stye */
 @media (max-width: 767px) {
     .show-in-mobile-view {
-        display: block;
+        display: inline-block;
     }
 
     .show-in-desktop-view {
@@ -37,7 +37,7 @@
     }
 
     .show-in-desktop-view {
-        display: block;
+        display: inline-block;
     }
 }
 
@@ -48,6 +48,6 @@
     }
 
     .show-in-desktop-view {
-        display: block;
+        display: inline-block;
     }
 }
