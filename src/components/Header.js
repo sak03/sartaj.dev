@@ -15,7 +15,7 @@ const Header = () => {
         <Link href={'/'}>
           <span className={`header-item${pathName === '/' ? "-active" : ""} flex`}> <FaHome className='mt-1 mx-1' style={{ fontSize: "23px" }} /> Home </span></Link>
         <Link href={'/work-experience'}>
-          <span className={`header-item${pathName === '/work-experience' ? "-active" : ""} flex`}><FaBriefcase className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Work</span>
+          <span className={`header-item${pathName === '/work-experience' ? "-active" : ""} mx-1 flex`}><FaBriefcase className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Work</span>
         </Link>
         <Link href={'/projects'}>
           <span className={`header-item${pathName === '/projects' ? "-active" : ""} flex`}><FaFileSignature className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Projects</span>
@@ -24,7 +24,7 @@ const Header = () => {
           <span className={`header-item${pathName === '/skills' ? "-active" : ""} mx-1 flex`}><FaCogs className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Skills</span>
         </Link>
         <Link href={'/about'}>
-          <span className={`header-item${pathName === '/about' ? "-active" : ""} mx-1 flex`}><FaUserAlt className='mt-2 mx-1' style={{ fontSize: "20px" }} /> About</span>
+          <span className={`header-item${pathName === '/about' ? "-active" : ""} flex`}><FaUserAlt className='mt-2 mx-1' style={{ fontSize: "20px" }} /> About</span>
         </Link>
         <Link href={'/contact'}>
           <span className={`header-item${pathName === '/contact' ? "-active" : ""} mx-1 flex`}><FaHeadphones className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Contact</span>
