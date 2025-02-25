@@ -4,7 +4,7 @@ import { FiChevronsRight } from "react-icons/fi";
 import Link from 'next/link';
 
 const HomeWorkExp = () => {
-    console.log("workData", workData)
+    // console.log("workData", workData)
     return (
         <div className='work-body'>
             <div className='flex justify-between'>
