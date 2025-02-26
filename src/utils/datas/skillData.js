@@ -40,4 +40,28 @@ export const frontEndSkills = [
         smallImgUrl: smallReactImg,
         largeImgUrl: "",
     },
+    {
+        id: "fes07",
+        name: "NodeJS",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes08",
+        name: "ExpressJS",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes09",
+        name: "MongoDB",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
+    {
+        id: "fes10",
+        name: "MySQL",
+        smallImgUrl: smallReactImg,
+        largeImgUrl: "",
+    },
 ]
