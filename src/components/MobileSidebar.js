@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 
 const MobileSidebar = () => {
-      const pathName = usePathname();
+    const pathName = usePathname();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -25,55 +25,54 @@ const MobileSidebar = () => {
                 {isOpen ? <FiX /> : <FiMenu />}
             </button>
 
+            {/* Overlay (fixes the issue) */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40"
+                    onClick={toggleSidebar}
+                ></div>
+            )}
+
             {/* Sidebar */}
             <div
-                className={`fixed top-0 left-0 h-full w-64 light-bg text-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-                    } transition-transform duration-300 ease-in-out lg:hidden`}
+                className={`fixed top-0 left-0 h-full w-64 light-bg text-white transform ${isOpen ? "translate-x-0" : "-translate-x-full"} 
+                transition-transform duration-300 ease-in-out lg:hidden z-50`}
             >
                 <ul className="flex flex-col p-4 space-y-4">
-                    <li onClick={()=> console.log("clicked")}>
-                        {/* <Link href={'/'}>
-                            <span className={`header-item${pathName === '/' ? "-active" : ""} flex`}> <FaHome className='mt-1 mx-1' style={{ fontSize: "23px" }} /> Home </span></Link> */}
-                        <Link href={"/"} className="text-lg hover:text-gray-400">
+                    <li>
+                        <Link href={"/"} className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href={"/about"} className="text-lg hover:text-gray-400">
+                        <Link href="/work-experience" className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
+                            Work
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/projects" className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/skills" className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
+                            Skills
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/about"} className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
                             About
                         </Link>
                     </li>
                     <li>
-                        <a href="#projects" className="text-lg hover:text-gray-400">
-                            Work
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" className="text-lg hover:text-gray-400">
-                            Skills
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" className="text-lg hover:text-gray-400">
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" className="text-lg hover:text-gray-400">
-                            Contact
-                        </a>
+                        <Link href="/contact" className="text-lg hover:text-gray-400" onClick={toggleSidebar}>
+                            Contacts
+                        </Link>
                     </li>
                 </ul>
             </div>
-
-            {/* Overlay (optional, for dimming the background) */}
-            {isOpen && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-0"
-                    onClick={toggleSidebar}
-                ></div>
-            )}
         </div>
     );
-}
-export default MobileSidebar
+};
+
+export default MobileSidebar;
