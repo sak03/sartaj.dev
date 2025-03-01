@@ -31,17 +31,17 @@ const MobileSidebar = () => {
                     } transition-transform duration-300 ease-in-out lg:hidden`}
             >
                 <ul className="flex flex-col p-4 space-y-4">
-                    <li>
+                    <li onClick={()=> console.log("clicked")}>
                         {/* <Link href={'/'}>
                             <span className={`header-item${pathName === '/' ? "-active" : ""} flex`}> <FaHome className='mt-1 mx-1' style={{ fontSize: "23px" }} /> Home </span></Link> */}
-                        <a href="#home" className="text-lg hover:text-gray-400">
+                        <Link href={"/"} className="text-lg hover:text-gray-400">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#about" className="text-lg hover:text-gray-400">
+                        <Link href={"/about"} className="text-lg hover:text-gray-400">
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#projects" className="text-lg hover:text-gray-400">

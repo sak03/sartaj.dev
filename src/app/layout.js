@@ -93,8 +93,8 @@ export const metadata = {
         },
     },
     // Other Metadata
-    themeColor: "#ffffff", // Theme color for the browser (e.g., mobile browser header)
-    viewport: "width=device-width, initial-scale=1.0", // Viewport settings for responsive design
+    // themeColor: "#ffffff", // Theme color for the browser (e.g., mobile browser header)
+    // viewport: "width=device-width, initial-scale=1.0", // Viewport settings for responsive design
 
     charset: "utf-8", // Character encoding for the page
     language: "en", // Language of the page content
