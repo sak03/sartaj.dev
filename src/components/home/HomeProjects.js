@@ -2,7 +2,7 @@
 import React from 'react'
 import { personalProjectsData } from '@/utils/datas/projectsData'
 import Image from 'next/image'
-import imgVal from '../../assets/projects/personal/tictactoe.png'
+// import imgVal from '../../assets/projects/personal/tictactoe.png'
 import Link from 'next/link'
 import { FiChevronsRight } from 'react-icons/fi'
 
@@ -10,7 +10,6 @@ const HomeProjects = () => {
   
   return (
     <div className='home-project-body'>
-
       <div className='flex justify-between'>
         <h5 className='home-project-title'>PROJECTS</h5>
         <Link href={'projects'} >
