@@ -83,10 +83,34 @@
         flex-direction: column;
     }
 
-    .work-card {
-        width: 100%;
-        padding: 10px;
-    }
+    // .work-card {
+    //     width: 100%;
+    //     padding: 10px;
+    // }
+
+        .work-card {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            background: #fff;
+            overflow: hidden;
+        }
+    
+        /* For the background number */
+        .exp-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            /* adjust as needed */
+            color: rgba(0, 0, 0, 0.05);
+            /* black with 5% opacity */
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            font-weight: 800;
+        }
 
     // home projects style
     .home-project-body {

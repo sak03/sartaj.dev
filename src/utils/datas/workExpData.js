@@ -51,7 +51,7 @@ export const workData = [
         id: "we05",
         num: "05",
         companyName: "Fristo Pvt. Ltd.",
-        employmentType: "Full Time",
+        employmentType: "Part Time",
         companyUrl: "",
         location: "New Delhi, Delhi",
         stDate: "Aug, 2021",
