@@ -2,7 +2,7 @@ export const workData = [
     {
         id: "we01",
         num: "01",
-        companyName: "Ridown Technology Pvt. Ltd.",
+        companyName: "Ridown Technology",
         employmentType: "Full Time",
         companyUrl: "",
         location: "Gurugram, Hariyana",
@@ -38,7 +38,7 @@ export const workData = [
     {
         id: "we04",
         num: "04",
-        companyName: "MITYUNG Infotech Pvt. Ltd.",
+        companyName: "MITYUNG Infotech",
         employmentType: "Full Time",
         companyUrl: "",
         location: "Noida, Uttar Pradesh",

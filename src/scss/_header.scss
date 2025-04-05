@@ -100,21 +100,23 @@
 
     .header-item:hover {
         font-size: 24px;
-        color: $light-text;
-        background-color: $theme-dark-text;
+        // color: $light-text;
+        // background-color: $theme-dark-text;
+        color: $theme-dark-text;
         padding: 2px 20px;
         border-radius: 30px;
-        margin-top: 7px;
+        margin-top: 10px;
         cursor: pointer;
     }
 
     .header-item-active {
         font-size: 24px;
-        color: $light-text;
-        background-color: $theme-dark-text;
+        // color: $light-text;
+        // background-color: $theme-dark-text;
+        color: $theme-dark-text;
         padding: 2px 20px;
         border-radius: 30px;
-        margin-top: 7px;
+        margin-top: 10px;
         cursor: pointer;
     }
 
