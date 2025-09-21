@@ -17,7 +17,7 @@ export const personalProjectsData = [
     {
         id: "pp02",
         name: "Tic Tac Toe",
-        imgUrl: tictactoeImg,
+        imgUrl: publicLibraryImg,
         repoUrl:"",
         liveUrl:"",
         stDate: "Jul, 2023",
