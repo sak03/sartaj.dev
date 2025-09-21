@@ -1,67 +1,79 @@
 // front end image import
+import Image from 'next/image';
 import smallNextImg from '../../assets/skills/fe/small-nextjs.png';
 import smallReactImg from '../../assets/skills/fe/small-reactjs.png';
+import { FaReact } from "react-icons/fa";
 
 
 export const frontEndSkills = [
     {
         id:"fes01",
         title:"NextJS",
+        iconType:'img',
         icon: smallNextImg,
         largeImgUrl:"",
     },
     {
         id: "fes02",
         title: "ReactJS",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes03",
         title: "JavaScript",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes04",
         title: "TypeScript",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes05",
         title: "Redux",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes06",
         title: "Context API",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes07",
         title: "NodeJS",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes08",
         title: "ExpressJS",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes09",
         title: "MongoDB",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes10",
         title: "MySQL",
-        icon: smallReactImg,
+        iconType: 'ico',
+        icon: <FaReact />,
         largeImgUrl: "",
     },
 ]

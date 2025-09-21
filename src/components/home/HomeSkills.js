@@ -1,8 +1,8 @@
 import React from 'react'
 import { frontEndSkills } from '@/utils/datas/skillData'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FiChevronsRight } from 'react-icons/fi'
+import Image from 'next/image'
 
 const HomeSkills = () => {
     return (
@@ -16,10 +16,18 @@ const HomeSkills = () => {
             </div>
             <h3 className='home-skill-subtitle'>I'm Proficient In</h3>
             <div className='home-skill-card-body'>
-                {frontEndSkills?.map((item) => (
+                {frontEndSkills?.slice(0,3)?.map((item) => (
                     <div className='home-skill-card' key={item.id}>
-                        <Image src={item.smallImgUrl} alt={item.name} width={125} height={80} />
-                        <h3 className='home-skill-title'>{item.name}</h3>
+                        <div className='home-skill-card'>
+                        <span className="text-3xl">
+                                {item.iconType === "img" ? (
+                                <Image src={item.icon} alt={item.title} width={50} height={50} />
+                            ) : (
+                                item.icon
+                            )}
+                        </span>
+                        <h3 className='home-skill-title'>{item.title}</h3>
+                        </div>
                     </div>
                 ))}
             </div>
