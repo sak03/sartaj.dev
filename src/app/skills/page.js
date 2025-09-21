@@ -14,11 +14,7 @@ const Skills = () => {
                     <div className='home-skill-card' key={item.id}>
                         <div className='home-skill-card'>
                             <span className="text-5xl">
-                                {item.iconType === "img" ? (
-                                    <Image src={item.icon} alt={item.title} width={50} height={50} />
-                                ) : (
-                                    item.icon
-                                )}
+                                {item.icon}
                             </span>
                             <h3 className='home-skill-title'>{item.title}</h3>
                         </div>

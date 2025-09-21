@@ -16,15 +16,11 @@ const HomeSkills = () => {
             </div>
             <h3 className='home-skill-subtitle'>I'm Proficient In</h3>
             <div className='home-skill-card-body'>
-                {frontEndSkills?.slice(0,3)?.map((item) => (
+                {frontEndSkills?.slice(0,5)?.map((item) => (
                     <div className='home-skill-card' key={item.id}>
                         <div className='home-skill-card'>
                         <span className="text-3xl">
-                                {item.iconType === "img" ? (
-                                <Image src={item.icon} alt={item.title} width={50} height={50} />
-                            ) : (
-                                item.icon
-                            )}
+                                {item.icon}
                         </span>
                         <h3 className='home-skill-title'>{item.title}</h3>
                         </div>

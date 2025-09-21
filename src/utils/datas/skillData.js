@@ -2,78 +2,69 @@
 import Image from 'next/image';
 import smallNextImg from '../../assets/skills/fe/small-nextjs.png';
 import smallReactImg from '../../assets/skills/fe/small-reactjs.png';
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaJsSquare } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiRedux, SiNodedotjs, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 
 
 export const frontEndSkills = [
     {
         id:"fes01",
         title:"NextJS",
-        iconType:'img',
-        icon: smallNextImg,
+        icon: <SiNextdotjs/>,
         largeImgUrl:"",
     },
     {
         id: "fes02",
         title: "ReactJS",
-        iconType: 'ico',
         icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes03",
         title: "JavaScript",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <FaJsSquare />,
         largeImgUrl: "",
     },
     {
         id: "fes04",
         title: "TypeScript",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiTypescript />,
         largeImgUrl: "",
     },
     {
         id: "fes05",
         title: "Redux",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiRedux />,
         largeImgUrl: "",
     },
     {
         id: "fes06",
         title: "Context API",
-        iconType: 'ico',
         icon: <FaReact />,
         largeImgUrl: "",
     },
     {
         id: "fes07",
         title: "NodeJS",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiNodedotjs />,
         largeImgUrl: "",
     },
     {
         id: "fes08",
         title: "ExpressJS",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiExpress />,
         largeImgUrl: "",
     },
     {
         id: "fes09",
         title: "MongoDB",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiMongodb />,
         largeImgUrl: "",
     },
     {
         id: "fes10",
         title: "MySQL",
-        iconType: 'ico',
-        icon: <FaReact />,
+        icon: <SiMysql />,
         largeImgUrl: "",
     },
 ]
