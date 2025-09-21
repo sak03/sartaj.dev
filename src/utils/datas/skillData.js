@@ -1,7 +1,7 @@
 // front end image import
-import Image from 'next/image';
-import smallNextImg from '../../assets/skills/fe/small-nextjs.png';
-import smallReactImg from '../../assets/skills/fe/small-reactjs.png';
+// import Image from 'next/image';
+// import smallNextImg from '../../assets/skills/fe/small-nextjs.png';
+// import smallReactImg from '../../assets/skills/fe/small-reactjs.png';
 import { FaReact, FaJsSquare } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiRedux, SiNodedotjs, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 
@@ -43,6 +43,9 @@ export const frontEndSkills = [
         icon: <FaReact />,
         largeImgUrl: "",
     },
+]
+
+export const backEndSkills = [
     {
         id: "fes07",
         title: "NodeJS",
@@ -67,4 +70,4 @@ export const frontEndSkills = [
         icon: <SiMysql />,
         largeImgUrl: "",
     },
-]
+];
