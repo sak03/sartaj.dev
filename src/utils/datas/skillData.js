@@ -3,7 +3,7 @@
 // import smallNextImg from '../../assets/skills/fe/small-nextjs.png';
 // import smallReactImg from '../../assets/skills/fe/small-reactjs.png';
 import { FaReact, FaJsSquare } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiRedux, SiNodedotjs, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiRedux, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPhp, SiLaravel } from "react-icons/si";
 
 
 export const frontEndSkills = [
@@ -47,17 +47,32 @@ export const frontEndSkills = [
 
 export const backEndSkills = [
     {
-        id: "fes07",
+        id: "bes01",
         title: "NodeJS",
         icon: <SiNodedotjs />,
         largeImgUrl: "",
     },
     {
-        id: "fes08",
+        id: "bes02",
         title: "ExpressJS",
         icon: <SiExpress />,
         largeImgUrl: "",
     },
+    {
+        id: "bes03",
+        title: "PHP",
+        icon: <SiPhp />,
+        largeImgUrl: "",
+    },
+    {
+        id: "bes04",
+        title: "Laravel",
+        icon: <SiLaravel />,
+        largeImgUrl: "",
+    },
+];
+
+export const databaseSkills = [
     {
         id: "fes09",
         title: "MongoDB",
