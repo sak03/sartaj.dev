@@ -10,6 +10,7 @@ export const workData = [
         endDate: "Present",
         shortDescription: "Built their Full Stack Applications from scratch. Used PHP, Laravel, Livewire, JavaScript, Bootstrap",
         longDescription: "",
+        companyLink: 'https://www.ridown.com/'
     },
     {
         id:"we02",
@@ -22,6 +23,7 @@ export const workData = [
         endDate: "Jan, 2025",
         shortDescription:"Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
         longDescription:"",
+        companyLink: 'https://wemonde.com/'
     },
     {
         id: "we03",
@@ -34,6 +36,7 @@ export const workData = [
         endDate: "Jul, 2023",
         shortDescription: "Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
         longDescription: "",
+        companyLink: ''
     },
     {
         id: "we04",
@@ -46,6 +49,7 @@ export const workData = [
         endDate: "Jun, 2023",
         shortDescription: "Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
         longDescription: "",
+        companyLink: 'https://mityung.com/'
     },
     {
         id: "we05",
@@ -58,5 +62,6 @@ export const workData = [
         endDate: "Feb, 2022",
         shortDescription: "Built their front end from scratch. Used NextJS, ReactJS, JavaScript, TypeScript, Bootstrap",
         longDescription: "",
+        companyLink: ''
     },
 ]
