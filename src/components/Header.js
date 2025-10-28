@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaBriefcase, FaCogs, FaFileSignature, FaHeadphones, FaHome, FaUserAlt } from "react-icons/fa";
+import { FaBriefcase, FaCogs, FaFileSignature, FaHeadphones, FaHome, FaUserAlt, FaBloggerB } from "react-icons/fa";
 import MobileSidebar from './MobileSidebar';
 
 const Header = () => {
@@ -25,6 +25,9 @@ const Header = () => {
         </Link>
         <Link href={'/about'}>
           <span className={`header-item${pathName === '/about' ? "-active" : ""} flex`}><FaUserAlt className='mt-2 mx-1' style={{ fontSize: "20px" }} /> About</span>
+        </Link>
+        <Link href={'/blogs'}>
+          <span className={`header-item${pathName === '/blogs' ? "-active" : ""} flex`}><FaBloggerB className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Blogs</span>
         </Link>
         <Link href={'/contact'}>
           <span className={`header-item${pathName === '/contact' ? "-active" : ""} mx-1 flex`}><FaHeadphones className='mt-2 mx-1' style={{ fontSize: "20px" }} /> Contact</span>
