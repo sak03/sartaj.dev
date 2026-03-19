@@ -18,7 +18,7 @@ const HomeBlogs = () => {
             <div className='home-project-card-body'>
                 {blogsData.map((item, idx) => (
                     <Link
-                        href={`/blogs/${item.slug}`}
+                        href={`/blog/${item.id}`}
                         key={item.id}
                         className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group"
                     >
