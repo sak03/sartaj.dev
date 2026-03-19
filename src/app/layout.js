@@ -112,14 +112,18 @@ export default function RootLayout({ children }) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
+                {/* Skip to content link for accessibility */}
+                <a href="#main-content" className="sr-only focus:not-sr-only skip-to-content-link" tabIndex={0}>
+                  Skip to main content
+                </a>
                 <div className="layout-body">
                     <div className="layout-header">
                         <Header />
                     </div>
-                    <div className="layout-section">
+                    <main id="main-content" className="layout-section main-content-centered" tabIndex={-1}>
                         {children}
                         <Footer />
-                    </div>
+                    </main>
                 </div>
             </body>
         </html>

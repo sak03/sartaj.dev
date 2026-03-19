@@ -5,11 +5,19 @@ import HomeWorkExp from "@/components/home/HomeWorkExp";
 
 export default function Home() {
     return (
-        <div>
-            <Landing />
-            <HomeWorkExp />
-            <HomeProjects />
-            <HomeSkills />
-        </div>
+        <>
+            <section aria-label="Landing Section" className="landing-full-width">
+                <Landing />
+            </section>
+            <section aria-label="Work Experience Section" className="main-content-centered">
+                <HomeWorkExp />
+            </section>
+            <section aria-label="Projects Section" className="main-content-centered">
+                <HomeProjects />
+            </section>
+            <section aria-label="Skills Section" className="main-content-centered">
+                <HomeSkills />
+            </section>
+        </>
     );
 }

@@ -4,7 +4,7 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 const Footer = () => {
   const currentDate = new Date()
   return (
-    <div className='bg-white'>
+    <footer className='bg-white' role="contentinfo" aria-label="Site Footer">
       <div className='px-5 footer-section py-3'>
         <div className='mt-3'>
           <h3 className='footer-item'>Sartaj Alam</h3>
@@ -17,15 +17,19 @@ const Footer = () => {
         </div>
         <div className='mt-3'>
           <h3 className='footer-item'>Important Links</h3>
-          <p className='footer-sub-item'>Work, Projects</p>
-          <p className='footer-sub-item'>Skills, About, Contact</p>
+          <nav aria-label="Footer Important Links">
+            <ul>
+              <li><a href="/work-experience" className='footer-sub-item'>Work</a>, <a href="/projects" className='footer-sub-item'>Projects</a></li>
+              <li><a href="/skills" className='footer-sub-item'>Skills</a>, <a href="/about" className='footer-sub-item'>About</a>, <a href="/contact" className='footer-sub-item'>Contact</a></li>
+            </ul>
+          </nav>
         </div>
         <div className='mt-3'>
           <h3 className='footer-item'>Follow me</h3>
           <div className='flex'>
-          <a href='https://github.com/sak03' target='_blank' className='footer-sub-item-icon'><FaGithubSquare /></a>
-          <a href='https://www.linkedin.com/in/sak03/' target='_blank' className='footer-sub-item-icon mx-2'><FaLinkedin /></a>
-          <a href='https://x.com/sartaj_03' target='_blank' className='footer-sub-item-icon'><FaTwitterSquare /></a>
+            <a href='https://github.com/sak03' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon'><FaGithubSquare /></a>
+            <a href='https://www.linkedin.com/in/sak03/' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon mx-2'><FaLinkedin /></a>
+            <a href='https://x.com/sartaj_03' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon'><FaTwitterSquare /></a>
           </div>
         </div>
       </div>
@@ -35,7 +39,7 @@ const Footer = () => {
         <span className='footer-bottom mt-2'>Made with love ❤️ by Sartaj</span>
         <span className='footer-bottom mt-2'>Maintained by @Sartaj</span>
       </div>
-    </div>
+    </footer>
   )
 }
 
