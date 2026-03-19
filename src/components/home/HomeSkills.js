@@ -19,7 +19,7 @@ const HomeSkills = () => {
                 {frontEndSkills?.slice(0,5)?.map((item, idx) => {
                     return(
                     <Link
-                        href={`/skills`}
+                        href={`/skill/${item.id}`}
                         key={item.id}
                         className="relative home-skill-card flex items-center min-h-[120px] p-6 bg-white rounded-xl shadow-md mb-6 overflow-visible w-full group cursor-pointer"
                         tabIndex={0}

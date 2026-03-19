@@ -22,19 +22,19 @@ const Header = () => {
             <a role="menuitem" tabIndex={0} aria-current={pathName === '/work-experience' ? 'page' : undefined} className={`header-item${pathName === '/work-experience' ? "-active" : ""} mx-1 flex`}>Work Experience</a>
           </Link>
           <Link href={'/projects'} legacyBehavior>
-            <a role="menuitem" tabIndex={0} aria-current={pathName === '/projects' ? 'page' : undefined} className={`header-item${pathName === '/projects' ? "-active" : ""} flex`}>Projects</a>
+            <a role="menuitem" tabIndex={0} aria-current={pathName === '/projects' ? 'page' : undefined} className={`header-item${pathName === '/projects' ? "-active" : ""} flex mx-5`}>Projects</a>
           </Link>
           <Link href={'/skills'} legacyBehavior>
             <a role="menuitem" tabIndex={0} aria-current={pathName === '/skills' ? 'page' : undefined} className={`header-item${pathName === '/skills' ? "-active" : ""} mx-1 flex`}>Skills</a>
           </Link>
           <Link href={'/blogs'} legacyBehavior>
-            <a role="menuitem" tabIndex={0} aria-current={pathName === '/blogs' ? 'page' : undefined} className={`header-item${pathName === '/blogs' ? "-active" : ""} flex`}>Blogs</a>
+            <a role="menuitem" tabIndex={0} aria-current={pathName === '/blogs' ? 'page' : undefined} className={`header-item${pathName === '/blogs' ? "-active" : ""} flex ml-5`}>Blogs</a>
           </Link>
         </div>
         {/* Right: About, Contact */}
         <div className='flex my-2 header-item-div' role="menubar">
           <Link href={'/about'} legacyBehavior>
-            <a role="menuitem" tabIndex={0} aria-current={pathName === '/about' ? 'page' : undefined} className={`header-item${pathName === '/about' ? "-active" : ""} flex`}>About</a>
+            <a role="menuitem" tabIndex={0} aria-current={pathName === '/about' ? 'page' : undefined} className={`header-item${pathName === '/about' ? "-active" : ""} flex mr-5`}>About</a>
           </Link>
           <Link href={'/contact'} legacyBehavior>
             <a role="menuitem" tabIndex={0} aria-current={pathName === '/contact' ? 'page' : undefined} className={`header-item${pathName === '/contact' ? "-active" : ""} mx-1 flex`}>Contact</a>

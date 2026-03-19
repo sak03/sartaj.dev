@@ -94,7 +94,7 @@
     .header-item {
         font-size: 24px;
         color: $dark-text;
-        padding: 2px 20px;
+        padding: 2px;
         margin-top: 10px;
         cursor: pointer;
     }
@@ -104,10 +104,10 @@
         // color: $light-text;
         // background-color: $theme-dark-text;
         color: $theme-dark-text;
-        padding: 2px 20px;
-        border-radius: 30px;
+        padding: 2px;
         margin-top: 10px;
         cursor: pointer;
+        border-bottom: 2px solid $theme-dark-text;
     }
 
     .header-item-active {
@@ -115,10 +115,10 @@
         // color: $light-text;
         // background-color: $theme-dark-text;
         color: $theme-dark-text;
-        padding: 2px 20px;
-        border-radius: 30px;
+        padding: 2px;
         margin-top: 10px;
         cursor: pointer;
+        border-bottom: 2px solid $theme-dark-text;
     }
 
     .header-hamberger {
