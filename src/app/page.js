@@ -2,6 +2,7 @@ import HomeProjects from "@/components/home/HomeProjects";
 import HomeSkills from "@/components/home/HomeSkills";
 import Landing from "@/components/home/Landing";
 import HomeWorkExp from "@/components/home/HomeWorkExp";
+import HomeBlogs from "@/components/home/HomeBlogs";
 
 export default function Home() {
     return (
@@ -17,6 +18,9 @@ export default function Home() {
             </section>
             <section aria-label="Skills Section" className="main-content-centered">
                 <HomeSkills />
+            </section>
+            <section aria-label="Blogs Section" className="main-content-centered">
+                <HomeBlogs />
             </section>
         </>
     );
