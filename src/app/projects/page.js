@@ -15,7 +15,7 @@ const Projects = () => {
             <div className='home-project-card-body'>
                 {personalProjectsData?.map((item, idx) => (
                     <Link
-                        href={`/projects`}
+                        href={`/project/${item.id}`}
                         key={item.id}
                         className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
                         tabIndex={0}
