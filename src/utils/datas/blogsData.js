@@ -1,0 +1,32 @@
+export const blogsData = [
+    {
+        id: "blog01",
+        title: "Getting Started with Next.js",
+        slug: "getting-started-nextjs",
+        date: "2026-03-20",
+        author: "Sartaj Alam",
+        shortDescription: "A beginner's guide to building fast, SEO-friendly web apps with Next.js.",
+        content: `Next.js is a powerful React framework for building server-rendered and statically generated web applications. In this blog, you'll learn how to set up your first Next.js project, understand the file structure, and create your first page. We'll also cover routing, data fetching, and deployment best practices.`,
+        coverImg: "",
+    },
+    {
+        id: "blog02",
+        title: "Understanding React Server Components",
+        slug: "understanding-react-server-components",
+        date: "2026-03-15",
+        author: "Sartaj Alam",
+        shortDescription: "Learn what React Server Components are and how they improve performance.",
+        content: `React Server Components allow you to render components on the server, reducing client-side bundle size and improving performance. This blog explains the concept, benefits, and how to use them in your Next.js projects.`,
+        coverImg: "",
+    },
+    {
+        id: "blog03",
+        title: "Deploying Next.js Apps to GitHub Pages",
+        slug: "deploying-nextjs-github-pages",
+        date: "2026-03-10",
+        author: "Sartaj Alam",
+        shortDescription: "Step-by-step guide to deploying your Next.js site to GitHub Pages.",
+        content: `Deploying a Next.js app to GitHub Pages can be tricky due to static export requirements. This blog walks you through the process, including configuration, build commands, and troubleshooting common issues.`,
+        coverImg: "",
+    },
+];
