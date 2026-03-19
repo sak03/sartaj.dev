@@ -27,7 +27,21 @@
     }
 }
 
+.footer-brand-name {
+    font-size: 24px;
+    color: $theme-dark-text;
+}
 
+.footer-brand-name .footer-brand-name1 {
+    font-size: 24px;
+    color: $theme-dark-text;
+}
+
+.footer-brand-name .footer-brand-name2 {
+    font-size: 24px;
+    color: $light-text;
+    background-color: $theme-dark-text;
+}
 
 .footer-item {
     color: $dark-text;
