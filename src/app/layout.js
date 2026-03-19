@@ -122,8 +122,10 @@ export default function RootLayout({ children }) {
                     </div>
                     <main id="main-content" className="layout-section main-content-centered" tabIndex={-1}>
                         {children}
-                        <Footer />
                     </main>
+                    <div className="layout-footer">
+                        <Footer />
+                    </div>
                 </div>
             </body>
         </html>

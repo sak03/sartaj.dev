@@ -1,3 +1,9 @@
+/* Footer full width like header */
+.layout-footer {
+    width: 100vw;
+    left: 0;
+    position: relative;
+}
 /* Ensure landing section is always full width */
 @media (min-width: 1025px) {
     .landing-full-width {
@@ -10,6 +16,7 @@
      position: fixed;
      top: 0px;
      width: 100vw;
+     z-index: 9999!important;
  }
 
 /* Mobile Stye */
