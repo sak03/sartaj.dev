@@ -28,7 +28,13 @@ const WorkExperienceDetails = ({ params }) => {
       />
 
       {/* Company Info */}
-      <div className="flex items-center gap-4 mb-4">
+      {experience?.companyUrl ? (
+        <a
+          href={experience.companyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-4 mb-4"
+        >
         <Image
           src={experience?.companyLogo}
           alt="logo"
@@ -44,7 +50,25 @@ const WorkExperienceDetails = ({ params }) => {
             {experience?.location} • {experience?.employmentType}
           </p>
         </div>
-      </div>
+      </a>) : (
+          <div className="flex items-center gap-4 mb-4">
+            <Image
+              src={experience?.companyLogo}
+              alt="logo"
+              className="w-14 h-14 rounded-full"
+              width={120}
+              height={100}
+            />
+            <div>
+              <h1 className="text-2xl font-bold">
+                {experience?.companyName}
+              </h1>
+              <p className="text-gray-500">
+                {experience?.location} • {experience?.employmentType}
+              </p>
+            </div>
+          </div>
+      )}
 
       {/* Duration */}
       <p className="text-sm text-gray-600 mb-4">
