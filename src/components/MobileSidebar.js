@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 const MobileSidebar = () => {
     const pathName = usePathname();
+    const hideCenterNav = pathName?.startsWith('/blog/');
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -45,64 +46,72 @@ const MobileSidebar = () => {
                             </Link>
                         </div>
                     </li>
-                    <li>
-                        <Link
-                            href={"/"}
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName === '/' ? 'bg-gray-100 text-black' : ''}`}
-                            onClick={toggleSidebar}
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/work-experiences"
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/work-experiences') ? 'bg-gray-100 text-black' : ''}`}
-                            onClick={toggleSidebar}
-                        >
-                            Work Experiences
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/projects"
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/projects') ? 'bg-gray-100 text-black' : ''}`}
-                            onClick={toggleSidebar}
-                        >
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/skills"
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/skills') ? 'bg-gray-100 text-black' : ''}`}
-                            onClick={toggleSidebar}
-                        >
-                            Skills
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/blogs"
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/blogs') ? 'bg-gray-100 text-black' : ''}`}
-                            onClick={toggleSidebar}
-                        >
-                            Blogs
-                        </Link>
-                    </li>
+                    {!hideCenterNav ? (
+                        <li>
+                            <Link
+                                href={"/"}
+                                className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName === '/' ? 'bg-gray-100 text-black' : ''}`}
+                                onClick={toggleSidebar}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                    ) : null}
+                    {!hideCenterNav ? (
+                        <>
+                            <li>
+                                <Link
+                                    href="/work-experiences"
+                                    className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/work-experiences') ? 'bg-gray-100 text-black' : ''}`}
+                                    onClick={toggleSidebar}
+                                >
+                                    Work Experiences
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/projects"
+                                    className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/projects') ? 'bg-gray-100 text-black' : ''}`}
+                                    onClick={toggleSidebar}
+                                >
+                                    Projects
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/skills"
+                                    className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/skills') ? 'bg-gray-100 text-black' : ''}`}
+                                    onClick={toggleSidebar}
+                                >
+                                    Skills
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/blogs"
+                                    className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/blogs') ? 'bg-gray-100 text-black' : ''}`}
+                                    onClick={toggleSidebar}
+                                >
+                                    Blogs
+                                </Link>
+                            </li>
+                        </>
+                    ) : null}
                 </ul>
                 {/* Sidebar Footer for About and Contact */}
                 <div className="absolute bottom-0 left-0 w-full p-4 border-t border-gray-700 bg-dark text-light bg-opacity-80">
                     <ul className="flex flex-col space-y-2">
-                        <li>
-                            <Link
-                                href={"/about"}
-                                className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/about') ? 'bg-gray-100 text-black' : ''}`}
-                                onClick={toggleSidebar}
-                            >
-                                About
-                            </Link>
-                        </li>
+                        {!hideCenterNav ? (
+                            <li>
+                                <Link
+                                    href={"/about"}
+                                    className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/about') ? 'bg-gray-100 text-black' : ''}`}
+                                    onClick={toggleSidebar}
+                                >
+                                    About
+                                </Link>
+                            </li>
+                        ) : null}
                         <li>
                             <Link
                                 href="/contact"

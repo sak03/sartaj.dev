@@ -2,13 +2,69 @@ import Link from "next/link";
 import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
 import { blogsData } from "@/utils/datas/blogsData";
 
+const siteUrl = "https://sak03.github.io/sartaj.dev";
+
+const getBlogBySlug = (blogId) => blogsData.find((item) => item.slug === blogId);
+
 export function generateStaticParams() {
     return blogsData.map((blog) => ({ blogId: blog.slug }));
 }
 
+export function generateMetadata({ params }) {
+    const blog = getBlogBySlug(params.blogId);
+
+    if (!blog) {
+        return {
+            title: "Blog Not Found | Sartaj Alam",
+            robots: {
+                index: false,
+                follow: false,
+            },
+        };
+    }
+
+    const title = blog.seo?.metaTitle || blog.title;
+    const description = blog.seo?.metaDescription || blog.shortDescription;
+    const canonicalUrl = `${siteUrl}/blog/${blog.slug}`;
+
+    return {
+        title,
+        description,
+        keywords: [
+            ...blog.tags,
+            blog.category,
+            "Sartaj Alam",
+            "web development blog",
+            "frontend blog",
+        ],
+        authors: [{ name: blog.author }],
+        creator: blog.author,
+        publisher: "Sartaj Alam",
+        alternates: {
+            canonical: canonicalUrl,
+        },
+        openGraph: {
+            title,
+            description,
+            url: canonicalUrl,
+            siteName: "Sartaj Alam Portfolio",
+            type: "article",
+            publishedTime: blog.date,
+            authors: [blog.author],
+            tags: blog.tags,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            creator: "@sartaj_03",
+        },
+    };
+}
+
 const BlogDetails = ({ params }) => {
     const { blogId } = params;
-    const blog = blogsData.find((item) => item.slug === blogId);
+    const blog = getBlogBySlug(blogId);
 
     if (!blog) {
         return <p>Blog not found</p>;
