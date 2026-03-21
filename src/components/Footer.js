@@ -23,7 +23,7 @@ const Footer = () => {
           <h3 className='footer-item'>Important Links</h3>
           <nav aria-label="Footer Important Links">
             <ul>
-              <li><a href="/work-experience" className='footer-sub-item'>Work</a>, <a href="/projects" className='footer-sub-item'>Projects</a>, <a href="/skills" className='footer-sub-item'>Skills</a></li>
+              <li><a href="/work-experiences" className='footer-sub-item'>Work Experiences</a>, <a href="/projects" className='footer-sub-item'>Projects</a>, <a href="/skills" className='footer-sub-item'>Skills</a></li>
             </ul>
           </nav>
         </div>

@@ -5,12 +5,11 @@ import Link from 'next/link';
 
 const HomeWorkExp = () => {
     const filterData = workData?.filter((item)=> item.employmentType === "Full Time")
-    // console.log("workData", workData)
     return (
         <div className='work-body'>
             <div className='flex justify-between'>
                 <h5 className='work-title'>WORK EXPERIENCES</h5>
-                <Link href={'work-experience'} >
+                <Link href={'work-experiences'} >
                     <span className='text-black flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
                 </Link>
             </div>
@@ -18,7 +17,7 @@ const HomeWorkExp = () => {
             <div className='work-card-body mt-5'>
                 {filterData?.map((item, idx) => (
                     <Link
-                        href={`/work-experience-details/${item.id}`}
+                        href={`/work-experience-details/${item.slug}`}
                         key={item.id}
                         className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
                         tabIndex={0}
