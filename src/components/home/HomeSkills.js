@@ -18,11 +18,13 @@ const HomeSkills = () => {
             <div className='home-skill-card-body flex flex-col'>
                 {frontEndSkills?.slice(0,5)?.map((item, idx) => {
                     return(
-                    <Link
-                        href={`/skill/${item.id}`}
+                    <a
+                        href={item.officialUrl}
                         key={item.id}
                         className="relative home-skill-card flex items-center min-h-[120px] p-6 bg-white rounded-xl shadow-md mb-6 overflow-visible w-full group cursor-pointer"
                         tabIndex={0}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         {/* Background icon */}
                         <span className="pointer-events-none select-none absolute inset-0 flex items-center justify-center text-[13vw] md:text-[8vw] lg:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] text-black/10 z-0 group-hover:text-blue-200 transition-colors" aria-hidden="true">
@@ -32,7 +34,7 @@ const HomeSkills = () => {
                             <h3 className='home-skill-title'>{item.title}</h3>
                             <p className='text-black mt-2'>{item.shortDescription}</p>
                         </div>
-                    </Link>
+                    </a>
                 )})}
             </div>
         </div>

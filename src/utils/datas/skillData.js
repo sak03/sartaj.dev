@@ -12,6 +12,7 @@ export const frontEndSkills = [
         title:"NextJS",
         icon: <SiNextdotjs/>,
         largeImgUrl:"",
+        officialUrl: "https://nextjs.org/",
         shortDescription:"Next.js is a powerful React framework that enables server-side rendering and static site generation, making it ideal for building fast and SEO-friendly web applications."
     },
     {
@@ -19,6 +20,7 @@ export const frontEndSkills = [
         title: "ReactJS",
         icon: <FaReact />,
         largeImgUrl: "",
+        officialUrl: "https://react.dev/",
         shortDescription: "React.js is a popular JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering, making it a top choice for front-end development."
     },
     {
@@ -26,6 +28,7 @@ export const frontEndSkills = [
         title: "JavaScript",
         icon: <FaJsSquare />,
         largeImgUrl: "",
+        officialUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         shortDescription: "JavaScript is a versatile programming language that enables interactive web development, allowing developers to create dynamic and responsive user interfaces across various platforms."
     },
     {
@@ -33,6 +36,7 @@ export const frontEndSkills = [
         title: "TypeScript",
         icon: <SiTypescript />,
         largeImgUrl: "",
+        officialUrl: "https://www.typescriptlang.org/",
         shortDescription: "TypeScript is a statically typed superset of JavaScript that adds optional types, enhancing code quality and maintainability while providing powerful tooling for large-scale applications."
     },
     {
@@ -40,6 +44,7 @@ export const frontEndSkills = [
         title: "Redux",
         icon: <SiRedux />,
         largeImgUrl: "",
+        officialUrl: "https://redux.js.org/",
         shortDescription: "Redux is a predictable state management library for JavaScript applications, commonly used with React to manage application state in a centralized and efficient manner."
     },
     {
@@ -47,6 +52,7 @@ export const frontEndSkills = [
         title: "Context API",
         icon: <FaReact />,
         largeImgUrl: "",
+        officialUrl: "https://react.dev/reference/react/createContext",
         shortDescription: "The Context API is a React feature that allows developers to share state across the component tree without prop drilling, making it easier to manage global state in React applications."
     },
 ]
@@ -57,6 +63,7 @@ export const backEndSkills = [
         title: "NodeJS",
         icon: <SiNodedotjs />,
         largeImgUrl: "",
+        officialUrl: "https://nodejs.org/",
         shortDescription: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, enabling developers to run JavaScript on the server-side and build scalable network applications."
     },
     {
@@ -64,6 +71,7 @@ export const backEndSkills = [
         title: "ExpressJS",
         icon: <SiExpress />,
         largeImgUrl: "",
+        officialUrl: "https://expressjs.com/",
         shortDescription: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications, making it a popular choice for backend development."
     },
     {
@@ -71,6 +79,7 @@ export const backEndSkills = [
         title: "PHP",
         icon: <SiPhp />,
         largeImgUrl: "",
+        officialUrl: "https://www.php.net/",
         shortDescription: "PHP is a widely-used open-source scripting language that is especially suited for web development and can be embedded into HTML, making it a popular choice for server-side programming."
     },
     {
@@ -78,6 +87,7 @@ export const backEndSkills = [
         title: "Laravel",
         icon: <SiLaravel />,
         largeImgUrl: "",
+        officialUrl: "https://laravel.com/",
         shortDescription: "Laravel is a popular PHP web application framework that provides a robust set of features for building modern web applications, making it a preferred choice for backend development."
 
     },
@@ -89,6 +99,7 @@ export const databaseSkills = [
         title: "MongoDB",
         icon: <SiMongodb />,
         largeImgUrl: "",
+        officialUrl: "https://www.mongodb.com/",
         shortDescription: "MongoDB is a popular NoSQL database that provides high performance, high availability, and easy scalability for modern web applications."
     },
     {
@@ -96,6 +107,7 @@ export const databaseSkills = [
         title: "MySQL",
         icon: <SiMysql />,
         largeImgUrl: "",
+        officialUrl: "https://www.mysql.com/",
         shortDescription: "MySQL is a widely-used open-source relational database management system that provides a robust and scalable solution for storing and managing structured data in web applications."
     },
 ];
