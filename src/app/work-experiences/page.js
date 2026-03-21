@@ -13,7 +13,7 @@ const WorkExperience = () => {
       <div className='work-card-body mt-5'>
         {workData?.map((item, idx) => (
           <Link
-            href={`/work-experience-details/${item.slug}`}
+            href={`/work-experience/${item.slug}`}
             key={item.id}
             className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
             tabIndex={0}
