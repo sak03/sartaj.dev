@@ -56,11 +56,11 @@ const MobileSidebar = () => {
                     </li>
                     <li>
                         <Link
-                            href="/work-experience"
-                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/work-experience') ? 'bg-gray-100 text-black' : ''}`}
+                            href="/work-experiences"
+                            className={`block w-full text-lg px-4 py-2 hover:text-gray-400 rounded ${pathName.startsWith('/work-experiences') ? 'bg-gray-100 text-black' : ''}`}
                             onClick={toggleSidebar}
                         >
-                            Work Experience
+                            Work Experiences
                         </Link>
                     </li>
                     <li>

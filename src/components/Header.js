@@ -18,8 +18,8 @@ const Header = () => {
         </div>
         {/* Center: Work, Projects, Skills, Blogs */}
         <div className='flex my-2 header-item-div' role="menubar">
-          <Link href={'/work-experience'} legacyBehavior>
-            <a role="menuitem" tabIndex={0} aria-current={pathName === '/work-experience' ? 'page' : undefined} className={`header-item${pathName === '/work-experience' ? "-active" : ""} mx-1 flex`}>Work Experience</a>
+          <Link href={'/work-experiences'} legacyBehavior>
+            <a role="menuitem" tabIndex={0} aria-current={pathName === '/work-experiences' ? 'page' : undefined} className={`header-item${pathName === '/work-experiences' ? "-active" : ""} mx-1 flex`}>Work Experiences</a>
           </Link>
           <Link href={'/projects'} legacyBehavior>
             <a role="menuitem" tabIndex={0} aria-current={pathName === '/projects' ? 'page' : undefined} className={`header-item${pathName === '/projects' ? "-active" : ""} flex mx-5`}>Projects</a>
