@@ -2,11 +2,14 @@
 import { workData } from "@/utils/datas/workExpData";
 import Image from "next/image";
 
-const WorkExperienceDetails = async ({ params }) => {
-  const { expId } = await params;
+export function generateStaticParams() {
+  return workData.map((experience) => ({ expId: experience.slug }));
+}
+
+const WorkExperienceDetails = ({ params }) => {
+  const { expId } = params;
 
   const experience = workData.find(exp => exp.slug === expId);
-  console.log("experience", expId, experience);
 
   if (!experience) {
     return <p>Experience not found.</p>;
