@@ -1,39 +1,29 @@
 'use client'
 import React from 'react'
 import { blogsData } from '@/utils/datas/blogsData'
-import Link from 'next/link'
-import { FiChevronsRight } from 'react-icons/fi'
+import BlogCard from '@/components/blog/BlogCard'
 
 const Blogs = () => {
     return (
-        <div className='home-project-body !bg-white'>
-            <div className='mt-8'>
-                <h5 className='home-project-title'>BLOGS</h5>
-            </div>
-            <h3 className='home-project-subtitle'>My Latest Blogs</h3>
-            <div className='home-project-card-body'>
-                {blogsData.map((item, idx) => (
-                    <Link
-                        href={`/blog/${item.id}`}
-                        key={item.id}
-                        className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group"
-                    >
-                        {/* Background number */}
-                        <span
-                            className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-extrabold text-[16vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] 2xl:text-[6vw] text-black/10 z-0 group-hover:text-blue-200 transition-colors"
-                            aria-hidden="true"
-                        >
-                            0{idx + 1}
-                        </span>
-                        <div className="relative z-10 w-full">
-                            <h3 className="exp-title mb-1">{item.title}</h3>
-                            <p className="text-black text-xs mb-1">{item.date} | {item.author}</p>
-                            <p className="text-black text-sm">{item.shortDescription}</p>
-                        </div>
-                    </Link>
-                ))}
-            </div>
-        </div>
+        <main className='px-3 py-6 md:px-5 md:py-12'>
+            <section className='mx-auto max-w-6xl'>
+                <div className='max-w-3xl'>
+                    <p className='text-xs font-semibold uppercase tracking-[0.35em] text-black/45'>Blog Archive</p>
+                    <h1 className='mt-4 text-4xl font-semibold leading-tight text-black md:text-6xl'>
+                        Writing about frontend systems, product thinking, and cleaner builds.
+                    </h1>
+                    <p className='mt-5 max-w-2xl text-base leading-8 text-black/70'>
+                        These posts are focused on practical learning. The goal is not just to explain concepts, but to make them easier to apply in real projects.
+                    </p>
+                </div>
+
+                <div className='mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3'>
+                    {blogsData.map((item) => (
+                        <BlogCard blog={item} key={item.id} compact />
+                    ))}
+                </div>
+            </section>
+        </main>
     )
 }
 
