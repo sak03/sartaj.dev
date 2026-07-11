@@ -1,0 +1,339 @@
+.portfolio-page {
+    background: #fff;
+    color: $dark-text;
+    padding: 32px 20px 56px;
+}
+
+.portfolio-hero {
+    display: grid;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.portfolio-eyebrow {
+    color: $theme-dark-text;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+}
+
+.portfolio-hero-title,
+.portfolio-section-title {
+    color: $dark-text;
+    font-weight: 600;
+    line-height: 1.14;
+}
+
+.portfolio-hero-title {
+    font-size: 34px;
+    max-width: 760px;
+}
+
+.portfolio-section-title {
+    font-size: 28px;
+    max-width: 680px;
+}
+
+.portfolio-hero-text,
+.portfolio-body-text {
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+.portfolio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.portfolio-btn {
+    align-items: center;
+    border-radius: 6px;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 10px;
+    justify-content: center;
+    min-height: 42px;
+    padding: 9px 16px;
+    transition: all 0.2s ease;
+}
+
+.portfolio-btn-primary {
+    background: $theme-dark-text;
+    color: #fff;
+}
+
+.portfolio-btn-primary:hover {
+    background: $theme-light-text;
+    color: $dark-text;
+}
+
+.portfolio-btn-secondary {
+    border: 1px solid rgba(6, 78, 59, 0.22);
+    color: $theme-dark-text;
+}
+
+.portfolio-btn-secondary:hover {
+    border-color: $theme-dark-text;
+    background: rgba(6, 78, 59, 0.06);
+}
+
+.portfolio-section {
+    margin-top: 56px;
+}
+
+.portfolio-card-grid {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.portfolio-card,
+.about-hero-card,
+.contact-link-panel,
+.contact-form {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.portfolio-card {
+    min-height: 180px;
+    overflow: hidden;
+    padding: 24px;
+    position: relative;
+}
+
+.portfolio-card-icon,
+.about-hero-mark {
+    color: rgba(6, 78, 59, 0.12);
+    font-size: 72px;
+    position: absolute;
+    right: 22px;
+    top: 18px;
+}
+
+.portfolio-card h3 {
+    color: $dark-text;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-card p {
+    color: rgba(0, 0, 0, 0.68);
+    line-height: 1.75;
+    max-width: 92%;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero-card {
+    background: rgb(245, 243, 243);
+    min-height: 280px;
+    overflow: hidden;
+    padding: 28px;
+    position: relative;
+}
+
+.about-hero-card h2 {
+    color: $theme-dark-text;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero-card p {
+    color: rgba(0, 0, 0, 0.68);
+    line-height: 1.75;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-stack-list,
+.about-values,
+.contact-mini-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.about-stack-list span,
+.about-values span,
+.contact-mini-list span {
+    align-items: center;
+    background: rgba(6, 78, 59, 0.08);
+    border: 1px solid rgba(6, 78, 59, 0.12);
+    border-radius: 6px;
+    color: $theme-dark-text;
+    display: inline-flex;
+    gap: 8px;
+    padding: 8px 10px;
+}
+
+.about-story-section,
+.contact-content-section {
+    display: grid;
+    gap: 28px;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.contact-socials a {
+    color: $theme-dark-text;
+    font-size: 34px;
+    line-height: 1;
+}
+
+.contact-socials a:hover {
+    color: $theme-light-text;
+}
+
+.contact-link-panel {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+}
+
+.contact-link-card {
+    align-items: center;
+    background: rgb(245, 243, 243);
+    border-radius: 8px;
+    color: $dark-text;
+    display: flex;
+    gap: 14px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.contact-link-card:hover {
+    background: rgba(110, 231, 183, 0.18);
+}
+
+.contact-link-icon {
+    align-items: center;
+    background: $theme-dark-text;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-flex;
+    flex: 0 0 42px;
+    font-size: 18px;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+}
+
+.contact-link-card strong,
+.contact-link-card small {
+    display: block;
+}
+
+.contact-link-card small {
+    color: rgba(0, 0, 0, 0.62);
+    margin-top: 2px;
+}
+
+.contact-form {
+    padding: 22px;
+}
+
+.contact-form,
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form-row {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-form label span {
+    color: $theme-dark-text;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    background: rgb(245, 243, 243);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    color: $dark-text;
+    outline: none;
+    padding: 12px 14px;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: $theme-dark-text;
+    box-shadow: 0 0 0 3px rgba(6, 78, 59, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-submit {
+    border: 0;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.contact-form-note {
+    color: rgba(0, 0, 0, 0.58);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .portfolio-page {
+        padding: 48px 40px 72px;
+    }
+
+    .portfolio-hero,
+    .about-story-section,
+    .contact-content-section {
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    }
+
+    .portfolio-hero-title {
+        font-size: 48px;
+    }
+
+    .portfolio-section-title {
+        font-size: 36px;
+    }
+
+    .portfolio-card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1025px) {
+    .portfolio-page {
+        padding: 56px 80px 88px;
+    }
+}
