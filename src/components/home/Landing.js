@@ -1,82 +1,99 @@
 "use client"
-import React, { useState } from 'react'
-import landingImg from '../../assets/landingImg/landing.jpg'
+
 import Image from 'next/image';
-import { Typewriter } from "react-simple-typewriter";
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import Link from 'next/link';
+import { useState } from 'react';
+import { FaGithubSquare, FaLinkedin, FaPhoneAlt, FaTwitterSquare } from "react-icons/fa";
+import { FiArrowUpRight, FiDownload, FiMail } from 'react-icons/fi';
+import landingImg from '../../assets/landingImg/landing.jpg';
 
 const Landing = () => {
     const [isNumberCopied, setIsNumberCopied] = useState(false);
 
     const copyMobileNoToClipboard = () => {
         navigator.clipboard.writeText("+919958564890");
-        setIsNumberCopied(true)
-        setTimeout(() => setIsNumberCopied(false), 2500)
+        setIsNumberCopied(true);
+        setTimeout(() => setIsNumberCopied(false), 2500);
     };
 
     return (
-        <div>
-            <div className='landing-section'>
-                <div className='landing-section1'><Image src={landingImg} width={600} height={400} alt='landing image' /> </div>
-                <div className='landing-section2'>
-                    <h2 className='text-4xl'>
-                        <Typewriter
-                            words={["Hi, I'm Sartaj Alam."]}
-                            loop={1} // Set to true if you want the effect to loop
-                            cursor
-                            cursorStyle="|"
-                            typeSpeed={150} // Typing speed in ms
-                            deleteSpeed={150} // Deleting speed in ms
-                            delaySpeed={1000} // Delay before typing starts again
-                        />
-                    </h2>
-                    <h3 className='text-2xl'>A Full Stack Web Developer.</h3>
-                    <div className='flex mt-3'>
-                        <a href='https://github.com/sak03' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon'><FaGithubSquare /></a>
-                        <a href='https://www.linkedin.com/in/sak03/' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon mx-2'><FaLinkedin /></a>
-                        <a href='https://x.com/sartaj_03' target='_blank' rel="noopener noreferrer" className='footer-sub-item-icon'><FaTwitterSquare /></a>
+        <>
+            <section className='landing-section landing-section-pro'>
+                <div className='landing-section1 landing-visual-panel'>
+                    <Image src={landingImg} width={680} height={760} priority alt='Sartaj Alam' />
+                    <div className='landing-availability'>
+                        <span aria-hidden='true'></span>
+                        Available for frontend and full-stack work
+                    </div>
+                    <p className='landing-lead'>
+                        I work with React, Next.js, Vue.js, Laravel, Livewire, FluxUI, Node.js, and modern UI systems with TailwindCSS to turn practical product ideas into responsive, production-ready experiences.
+                    </p>
+                </div>
+
+                <div className='landing-section2 landing-copy-panel'>
+                    <p className='portfolio-eyebrow'>SARTAJ ALAM</p>
+                    <h1>Full Stack Developer building clean, fast, and maintainable web products.</h1>
+
+                    <div className='landing-socials' aria-label='Social links'>
+                        <a href='https://github.com/sak03' target='_blank' rel="noopener noreferrer" aria-label='GitHub'><FaGithubSquare /></a>
+                        <a href='https://www.linkedin.com/in/sak03/' target='_blank' rel="noopener noreferrer" aria-label='LinkedIn'><FaLinkedin /></a>
+                        <a href='https://x.com/sartaj_03' target='_blank' rel="noopener noreferrer" aria-label='X'><FaTwitterSquare /></a>
                     </div>
                 </div>
-            </div>
-            <div className=''>
-                <p className='p-3'>
-                    As a Full Stack Web Developer, I build scalable, full-stack web applications with MongoDB, Express.js, React, and Node.js. I focus on delivering responsive, interactive, and efficient solutions while adhering to clean code and best practices. Passionate about innovation, I stay updated with the latest web technologies to create robust applications.
-                </p>
-            </div>
-            <div className='flex justify-center items-center'>{isNumberCopied ? <small className='text-danger my-2 p-2 show-in-desktop-view'>Phone number copied to clipboard!</small> : ""}</div>
-            <div className='flex justify-center items-center mb-8'>
-                <div className='mt-5 flex flex-wrap gap-3'>
+            </section>
+            <section className='landing-section'>
+                {isNumberCopied ? <small className='landing-copy-alert'>Phone number copied to clipboard.</small> : null}
+            </section>
+            <section className='landing-section'>
+                <div className='landing-actions'>
+                    <Link href='/projects' className='portfolio-btn portfolio-btn-primary'>
+                        View Projects
+                        <FiArrowUpRight aria-hidden='true' />
+                    </Link>
                     <a
-                        className='resume-download'
+                        className='portfolio-btn portfolio-btn-secondary'
                         href='https://drive.google.com/file/d/11_B2NTzYyvlynrw9XSXtQIRMGbR8STKx/view'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        My Resume
+                        Resume
+                        <FiDownload aria-hidden='true' />
                     </a>
                     <a
-                        className='resume-download'
-                        href="mailto:sartaj2394@gmail.com?subject=Want%20to%20work%20with%20us?&body=Hello%2C%20I%20would%20like%20to%20connect."
+                        className='portfolio-btn portfolio-btn-secondary'
+                        href="mailto:sartaj2394@gmail.com?subject=Project%20enquiry&body=Hi%20Sartaj%2C%20I%20would%20like%20to%20connect."
                     >
-                        Email Me
+                        Email
+                        <FiMail aria-hidden='true' />
                     </a>
-                    <a
-                        className='resume-download show-in-mobile-view'
-                        href="tel:+91 99585 64890"
-                    >
-                        Call Me
+                    <a className='portfolio-btn portfolio-btn-secondary display-block md:display-none' href="tel:+919958564890">
+                        Call
+                        <FaPhoneAlt aria-hidden='true' />
                     </a>
-                    <a
-                        className='resume-download show-in-desktop-view'
-                        href="#"
-                        onClick={e => { e.preventDefault(); copyMobileNoToClipboard(); }}
-                    >
-                        Call Me
-                    </a>
+                    <button className='portfolio-btn portfolio-btn-secondary display-none md:display-block' type='button' onClick={copyMobileNoToClipboard}>
+                        Call
+                        <FaPhoneAlt aria-hidden='true' />
+                    </button>
                 </div>
-            </div>
-        </div>
-    )
-}
+            </section>
+            <section className='landing-section'>
+                <div className='landing-stat-grid' aria-label='Professional highlights'>
+                    <div>
+                        <strong>5+</strong>
+                        <span>Years building web UI</span>
+                    </div>
+                    <div>
+                        <strong>Full Stack</strong>
+                        <span>Frontend-first delivery</span>
+                    </div>
+                    <div>
+                        <strong>Next.js</strong>
+                        <span>React and Laravel stack</span>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+};
 
-export default Landing
+export default Landing;

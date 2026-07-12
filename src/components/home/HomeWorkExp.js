@@ -9,7 +9,7 @@ const HomeWorkExp = () => {
         <div className='work-body'>
             <div className='flex justify-between'>
                 <h5 className='work-title'>WORK EXPERIENCES</h5>
-                <Link href={'work-experiences'} >
+                <Link href={'/work-experiences'} >
                     <span className='text-black flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
                 </Link>
             </div>
@@ -31,7 +31,7 @@ const HomeWorkExp = () => {
                         </span>
                         <div className="relative z-10 w-full">
                             <h3 className='exp-title'>{item.companyName}</h3>
-                            <p className='text-black'><small>{item.location}</small>  <small>{`${item.stDate} - ${item.endDate}`}</small></p>
+                            <p className='text-black'><small>{item.location}</small>  <small>{`${item.startDate} - ${item.endDate}`}</small></p>
                             <p className='text-black'>{item.shortDescription}</p>
                         </div>
                     </Link>

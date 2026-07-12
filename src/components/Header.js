@@ -21,7 +21,7 @@ const Header = () => {
         {!hideCenterNav ? (
           <div className='flex items-center self-center my-2 header-item-div' role="menubar">
             <Link href={'/work-experiences'} legacyBehavior>
-              <a role="menuitem" tabIndex={0} aria-current={pathName === '/work-experiences' ? 'page' : undefined} className={`header-item${pathName === '/work-experiences' ? "-active" : ""} mx-1 inline-flex items-center`}>Work Experiences</a>
+              <a role="menuitem" tabIndex={0} aria-current={pathName === '/work-experiences' ? 'page' : undefined} className={`header-item${pathName === '/work-experiences' ? "-active" : ""} mx-1 inline-flex items-center`}>Experience</a>
             </Link>
             <Link href={'/projects'} legacyBehavior>
               <a role="menuitem" tabIndex={0} aria-current={pathName === '/projects' ? 'page' : undefined} className={`header-item${pathName === '/projects' ? "-active" : ""} inline-flex items-center mx-5`}>Projects</a>

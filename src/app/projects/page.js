@@ -1,67 +1,53 @@
-
-'use client'
-import React from 'react';
+import ProjectCard from '@/components/project/ProjectCard';
 import { personalProjectsData, corporateProjectsData } from '@/utils/datas/projectsData';
-import Link from 'next/link';
 
 const Projects = () => {
     return (
-        <div className='home-project-body !bg-white'>
-            <div className='mt-8'>
-                <h5 className='home-project-title'>PROJECTS</h5>
-            </div>
-            {/* Personal Projects Section */}
-            <h3 className='home-project-subtitle mb-4'>Personal Projects</h3>
-            <div className='home-project-card-body'>
-                {personalProjectsData?.map((item, idx) => (
-                    <Link
-                        href={`/project/${item.id}`}
-                        key={item.id}
-                        className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
-                        tabIndex={0}
-                    >
-                        {/* Background number using Tailwind utility classes */}
-                        <span
-                            className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-extrabold text-[16vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] 2xl:text-[6vw] text-black/10 z-0 group-hover:text-blue-200 transition-colors"
-                            aria-hidden="true"
-                        >
-                            0{idx + 1}
-                        </span>
-                        <div className="relative z-10 w-full">
-                            <h3 className='exp-title'>{item.name}</h3>
-                            <p className='text-black'><small>{item.location}</small>  <small>{`${item.stDate} - ${item.endDate}`}</small></p>
-                            <p className='text-black'>{item.shortDescription}</p>
-                        </div>
-                    </Link>
-                ))}
-            </div>
-            {/* Corporate Projects Section */}
-            <h3 className='home-project-subtitle mt-12 mb-4'>Corporate Projects</h3>
-            <div className='home-project-card-body'>
-                {corporateProjectsData?.map((item, idx) => (
-                    <Link
-                        href={`/projects`}
-                        key={item.id}
-                        className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
-                        tabIndex={0}
-                    >
-                        {/* Background number using Tailwind utility classes */}
-                        <span
-                            className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-extrabold text-[16vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] 2xl:text-[6vw] text-black/10 z-0 group-hover:text-blue-200 transition-colors"
-                            aria-hidden="true"
-                        >
-                            0{idx + 1}
-                        </span>
-                        <div className="relative z-10 w-full">
-                            <h3 className='exp-title'>{item.name}</h3>
-                            <p className='text-black'><small>{item.location}</small>  <small>{`${item.stDate} - ${item.endDate}`}</small></p>
-                            <p className='text-black'>{item.shortDescription}</p>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+        <div className='portfolio-page projects-page'>
+            <section className='portfolio-hero projects-hero'>
+                <div>
+                    <p className='portfolio-eyebrow'>PROJECTS</p>
+                    <h1 className='portfolio-hero-title'>Selected work with practical UI, frontend architecture, and delivery focus.</h1>
+                    <p className='portfolio-hero-text'>
+                        These projects show how I think through structure, responsiveness, user flow, and maintainable implementation.
+                    </p>
+                </div>
+                <div className='projects-hero-panel'>
+                    <span>4</span>
+                    <strong>Case studies</strong>
+                    <p>Personal builds and professional work examples.</p>
+                </div>
+            </section>
+
+            <section className='portfolio-section'>
+                <div className='section-heading-row'>
+                    <div>
+                        <p className='portfolio-eyebrow'>PERSONAL PROJECTS</p>
+                        <h2 className='portfolio-section-title'>Built to practice real product patterns.</h2>
+                    </div>
+                </div>
+                <div className='project-card-grid'>
+                    {personalProjectsData.map((project, index) => (
+                        <ProjectCard project={project} featured={index === 0} key={project.id} />
+                    ))}
+                </div>
+            </section>
+
+            <section className='portfolio-section'>
+                <div className='section-heading-row'>
+                    <div>
+                        <p className='portfolio-eyebrow'>PROFESSIONAL WORK</p>
+                        <h2 className='portfolio-section-title'>Production experience from team environments.</h2>
+                    </div>
+                </div>
+                <div className='project-card-grid'>
+                    {corporateProjectsData.map((project) => (
+                        <ProjectCard project={project} featured key={project.id} />
+                    ))}
+                </div>
+            </section>
         </div>
     );
-}
+};
 
 export default Projects;
