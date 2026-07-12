@@ -7,12 +7,12 @@ import BlogCard from '@/components/blog/BlogCard'
 
 const HomeBlogs = () => {
     return (
-        <section className='home-project-body bg-[#f6f4ee]'>
+        <section className='home-project-body home-blogs-body'>
             <div className='flex justify-between items-center gap-4'>
                 <div>
                     <h5 className='home-project-title'>BLOGS</h5>
                 </div>
-                <Link href={'/blogs'} className='text-black flex pointer unddrline'>
+                <Link href={'/blogs'} className='text-foreground flex pointer unddrline'>
                     See All
                     <FiChevronsRight className='my-0 text-2xl' />
                 </Link>
@@ -26,7 +26,7 @@ const HomeBlogs = () => {
             </div>
 
             <div className='mt-6 md:hidden'>
-                <Link href={'/blogs'} className='inline-flex items-center gap-2 text-sm font-medium text-black border border-black/10 rounded-full px-4 py-2'>
+                <Link href={'/blogs'} className='inline-flex items-center gap-2 text-sm font-medium text-foreground border border-border rounded-full px-4 py-2'>
                     See All
                     <FiChevronsRight className='text-lg' />
                 </Link>

@@ -5,7 +5,7 @@ const BlogCard = ({ blog, compact = false }) => {
     return (
         <Link
             href={`/blog/${blog.slug}`}
-            className={`group overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-[0_16px_48px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)] ${compact ? '' : ''}`}
+            className={`group overflow-hidden rounded-[28px] border border-border bg-card text-card-foreground shadow-[0_16px_48px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)] dark:shadow-[0_16px_48px_rgba(0,0,0,0.35)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)] ${compact ? '' : ''}`}
         >
             <div
                 className={`relative flex flex-col justify-between ${compact ? 'min-h-[148px] p-5' : 'min-h-[160px] p-5 md:p-6'}`}
@@ -29,14 +29,14 @@ const BlogCard = ({ blog, compact = false }) => {
             </div>
 
             <div className={`${compact ? 'p-5' : 'p-5 md:p-6'}`}>
-                <div className='flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-black/45'>
+                <div className='flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-muted-foreground'>
                     <span>{blog.date}</span>
                     <span>{blog.author}</span>
                 </div>
-                <h4 className={`mt-3 font-semibold leading-snug text-black ${compact ? 'text-lg' : 'text-xl md:text-2xl'}`}>
+                <h4 className={`mt-3 font-semibold leading-snug text-foreground ${compact ? 'text-lg' : 'text-xl md:text-2xl'}`}>
                     {blog.title}
                 </h4>
-                <p className={`mt-3 text-black/70 ${compact ? 'line-clamp-3 text-sm leading-6' : 'line-clamp-3 text-sm md:text-base leading-7'}`}>
+                <p className={`mt-3 text-muted-foreground ${compact ? 'line-clamp-3 text-sm leading-6' : 'line-clamp-3 text-sm md:text-base leading-7'}`}>
                     {blog.shortDescription}
                 </p>
             </div>

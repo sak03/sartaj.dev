@@ -3,6 +3,7 @@ import "./globals.css";
 import "../scss/style.scss"
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -108,25 +109,45 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function () {
+                                try {
+                                    var storedTheme = localStorage.getItem('theme');
+                                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                                    var theme = storedTheme || (prefersDark ? 'dark' : 'light');
+                                    if (theme === 'dark') {
+                                        document.documentElement.classList.add('dark');
+                                    }
+                                } catch (e) {}
+                            })();
+                        `,
+                    }}
+                />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                {/* Skip to content link for accessibility */}
-                <a href="#main-content" className="sr-only focus:not-sr-only skip-to-content-link" tabIndex={0}>
-                  Skip to main content
-                </a>
-                <div className="layout-body">
-                    <div className="layout-header">
-                        <Header />
+                <ThemeProvider>
+                    {/* Skip to content link for accessibility */}
+                    <a href="#main-content" className="sr-only focus:not-sr-only skip-to-content-link" tabIndex={0}>
+                      Skip to main content
+                    </a>
+                    <div className="layout-body">
+                        <div className="layout-header">
+                            <Header />
+                        </div>
+                        <main id="main-content" className="layout-section main-content-centered" tabIndex={-1}>
+                            {children}
+                        </main>
+                        <div className="layout-footer">
+                            <Footer />
+                        </div>
                     </div>
-                    <main id="main-content" className="layout-section main-content-centered" tabIndex={-1}>
-                        {children}
-                    </main>
-                    <div className="layout-footer">
-                        <Footer />
-                    </div>
-                </div>
+                </ThemeProvider>
             </body>
         </html>
     );
