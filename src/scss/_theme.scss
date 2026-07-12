@@ -1,0 +1,305 @@
+html.dark {
+    color-scheme: dark;
+}
+
+html.dark body {
+    background-color: #0b1210;
+    color: #f3f4f6;
+}
+
+html.dark .header-brand {
+    background-color: #0f1714;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark .brand-name .brand-name1 {
+    color: $theme-light-text;
+}
+
+html.dark .brand-name .brand-name2 {
+    color: $light-text;
+    background-color: $theme-dark-text;
+}
+
+html.dark .header-item {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+html.dark .header-item:hover,
+html.dark .header-item-active {
+    color: $theme-light-text;
+    border-bottom-color: $theme-light-text;
+}
+
+html.dark .hamberger,
+html.dark .theme-toggle {
+    color: $theme-light-text;
+}
+
+html.dark .theme-toggle {
+    background: rgba(110, 231, 183, 0.1);
+    border-color: rgba(110, 231, 183, 0.24);
+}
+
+html.dark .theme-toggle:hover {
+    background: rgba(110, 231, 183, 0.18);
+    border-color: rgba(110, 231, 183, 0.4);
+    color: #fff;
+}
+
+html.dark .landing-section,
+html.dark .home-project-body,
+html.dark .portfolio-page,
+html.dark .footer-pro,
+html.dark .footer-section,
+html.dark .work-card,
+html.dark .portfolio-card,
+html.dark .about-hero-card,
+html.dark .contact-link-panel,
+html.dark .contact-form,
+html.dark .project-card,
+html.dark .project-metric-card,
+html.dark .project-story-card,
+html.dark .experience-summary-card {
+    background-color: #111a17;
+    color: #f3f4f6;
+}
+
+html.dark .work-body,
+html.dark .home-skill-body,
+html.dark .home-blogs-body,
+html.dark .footer-cta,
+html.dark .about-hero-card,
+html.dark .projects-hero-panel,
+html.dark .project-card-media,
+html.dark .project-detail-preview,
+html.dark .project-check-list li,
+html.dark .project-tech-section,
+html.dark .experience-banner,
+html.dark .experience-project-list article,
+html.dark .contact-link-card,
+html.dark .landing-stat-grid div {
+    background-color: #16211d;
+}
+
+html.dark .landing-section2,
+html.dark .landing-copy-panel h1,
+html.dark .portfolio-hero-title,
+html.dark .portfolio-section-title,
+html.dark .portfolio-card h3,
+html.dark .project-card-content h3,
+html.dark .experience-summary-card h1,
+html.dark .experience-project-list h3,
+html.dark .footer-cta h2,
+html.dark .footer-item,
+html.dark .exp-title,
+html.dark .home-project-title,
+html.dark .home-skill-title,
+html.dark .work-title {
+    color: #f3f4f6;
+}
+
+html.dark .work-subtitle,
+html.dark .home-project-subtitle,
+html.dark .home-skill-subtitle {
+    color: $theme-light-text;
+}
+
+html.dark .home-skill-card .home-skill-title,
+html.dark .work-card-body .exp-title {
+    color: #f3f4f6;
+}
+
+html.dark .landing-lead,
+html.dark .portfolio-hero-text,
+html.dark .portfolio-body-text,
+html.dark .portfolio-card p,
+html.dark .project-card-content p,
+html.dark .project-story-card p:last-child,
+html.dark .experience-summary-card p:not(.portfolio-eyebrow),
+html.dark .experience-project-list p,
+html.dark .footer-sub-item,
+html.dark .footer-link-list a,
+html.dark .footer-email-link,
+html.dark .footer-bottom-row,
+html.dark .projects-hero-panel p,
+html.dark .landing-stat-grid span,
+html.dark .project-card-meta,
+html.dark .project-metric-card span,
+html.dark .contact-link-card small,
+html.dark .contact-form-note,
+html.dark .about-hero-card p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+html.dark .portfolio-eyebrow,
+html.dark .section-link,
+html.dark .project-card-link,
+html.dark .project-back-link,
+html.dark .landing-copy-alert,
+html.dark .landing-socials a,
+html.dark .contact-socials a,
+html.dark .footer-link-list a:hover,
+html.dark .footer-email-link:hover,
+html.dark .footer-social-list a,
+html.dark .portfolio-btn-secondary,
+html.dark .about-stack-list span,
+html.dark .about-values span,
+html.dark .contact-mini-list span,
+html.dark .project-card-stack span,
+html.dark .project-tech-list span,
+html.dark .experience-meta-list span {
+    color: $theme-light-text;
+}
+
+html.dark .portfolio-card,
+html.dark .about-hero-card,
+html.dark .contact-link-panel,
+html.dark .contact-form,
+html.dark .project-card,
+html.dark .project-metric-card,
+html.dark .project-story-card,
+html.dark .experience-summary-card,
+html.dark .projects-hero-panel,
+html.dark .work-card,
+html.dark .landing-stat-grid div {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+html.dark .portfolio-btn-secondary {
+    border-color: rgba(110, 231, 183, 0.28);
+    background: transparent;
+}
+
+html.dark .portfolio-btn-secondary:hover {
+    background: rgba(110, 231, 183, 0.1);
+    border-color: rgba(110, 231, 183, 0.45);
+}
+
+html.dark .portfolio-btn-primary,
+html.dark .resume-download,
+html.dark .contact-link-icon,
+html.dark .project-card-status {
+    background: $theme-dark-text;
+    color: #fff;
+}
+
+html.dark .portfolio-btn-primary:hover,
+html.dark .resume-download:hover {
+    background: $theme-light-text;
+    color: $dark-text;
+}
+
+html.dark .about-stack-list span,
+html.dark .about-values span,
+html.dark .contact-mini-list span,
+html.dark .project-card-stack span,
+html.dark .project-tech-list span,
+html.dark .experience-meta-list span {
+    background: rgba(110, 231, 183, 0.1);
+    border-color: rgba(110, 231, 183, 0.2);
+}
+
+html.dark .contact-form input,
+html.dark .contact-form select,
+html.dark .contact-form textarea {
+    background: #16211d;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #f3f4f6;
+}
+
+html.dark .contact-form input:focus,
+html.dark .contact-form select:focus,
+html.dark .contact-form textarea:focus {
+    border-color: $theme-light-text;
+    box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.15);
+}
+
+html.dark .contact-link-card {
+    color: #f3f4f6;
+}
+
+html.dark .contact-link-card:hover {
+    background: rgba(110, 231, 183, 0.14);
+}
+
+html.dark .landing-availability {
+    background: #16211d;
+    border-color: rgba(110, 231, 183, 0.2);
+    color: $theme-light-text;
+}
+
+html.dark .landing-visual-panel img {
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+}
+
+html.dark .footer-pro {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html.dark .footer-bottom-row {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html.dark .footer-social-list a:hover,
+html.dark .landing-socials a:hover,
+html.dark .contact-socials a:hover {
+    color: #fff;
+}
+
+html.dark .exp-bg-number::before {
+    color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .portfolio-card-icon,
+html.dark .about-hero-mark,
+html.dark .project-card-fallback,
+html.dark .project-detail-fallback {
+    color: rgba(110, 231, 183, 0.16);
+}
+
+html.dark .mobile-sidebar-panel {
+    background-color: #0f1714 !important;
+    color: #f3f4f6;
+}
+
+html.dark .mobile-sidebar-link {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+html.dark .mobile-sidebar-link:hover {
+    color: $theme-light-text;
+}
+
+html.dark .mobile-sidebar-link-active {
+    background: rgba(110, 231, 183, 0.16);
+    color: $theme-light-text;
+}
+
+html.dark .mobile-sidebar-footer {
+    background: #0b1210;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .mobile-sidebar-brand .brand-name2 {
+    background-color: $theme-dark-text;
+    color: $light-text !important;
+}
+
+html.dark .mobile-sidebar-brand-accent {
+    background-color: rgba(110, 231, 183, 0.18) !important;
+    color: $theme-light-text !important;
+}
+
+.mobile-sidebar-brand-accent {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+    padding: 2px 8px;
+}
+
+html.dark .mobile-menu-btn {
+    color: $theme-light-text;
+    background: rgba(110, 231, 183, 0.1);
+    border: 1px solid rgba(110, 231, 183, 0.2);
+}

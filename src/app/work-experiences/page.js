@@ -3,9 +3,15 @@ import React from 'react';
 import { workData } from "@/utils/datas/workExpData";
 import Link from 'next/link';
 
+const workCardClass =
+  "relative flex items-center w-full min-h-[160px] p-8 bg-card border border-border text-card-foreground rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer transition-colors";
+
+const workCardBgNumClass =
+  "pointer-events-none select-none absolute inset-0 flex items-center justify-center font-extrabold text-[16vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] 2xl:text-[6vw] text-foreground/10 z-0 group-hover:text-emerald-400/20 transition-colors";
+
 const WorkExperience = () => {
   return (
-    <div className='work-body !bg-white'>
+    <div className='work-body'>
       <div className='mt-8'>
         <h5 className='work-title'>WORK EXPERIENCES</h5>
       </div>
@@ -15,20 +21,16 @@ const WorkExperience = () => {
           <Link
             href={`/work-experience/${item.slug}`}
             key={item.id}
-            className="relative flex items-center w-full min-h-[160px] p-8 bg-white rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer"
+            className={workCardClass}
             tabIndex={0}
           >
-            {/* Background number using Tailwind utility classes */}
-            <span
-              className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-extrabold text-[16vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] 2xl:text-[6vw] text-black/10 z-0 group-hover:text-blue-200 transition-colors"
-              aria-hidden="true"
-            >
+            <span className={workCardBgNumClass} aria-hidden="true">
               0{idx + 1}
             </span>
             <div className="relative z-10 w-full">
               <h3 className='exp-title'>{item.companyName}</h3>
-              <p className='text-black'><small>{item.location}</small>  <small>{`${item.startDate} - ${item.endDate}`}</small></p>
-              <p className='text-black'>{item.shortDescription}</p>
+              <p className='text-muted-foreground'><small>{item.location}</small>  <small>{`${item.startDate} - ${item.endDate}`}</small></p>
+              <p className='text-muted-foreground'>{item.shortDescription}</p>
             </div>
           </Link>
         ))}

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import MobileSidebar from './MobileSidebar';
+import ThemeToggle from './ThemeToggle';
 
 
 const Header = () => {
@@ -34,8 +35,9 @@ const Header = () => {
             </Link>
           </div>
         ) : <div />}
-        {/* Right: About, Contact */}
+        {/* Right: Theme, About, Contact */}
         <div className='flex items-center self-center mb-2 header-item-div' role="menubar">
+          <ThemeToggle className="theme-toggle-desktop" />
           {!hideCenterNav ? (
             <Link href={'/about'} legacyBehavior>
               <a role="menuitem" tabIndex={0} aria-current={pathName === '/about' ? 'page' : undefined} className={`header-item${pathName === '/about' ? "-active" : ""} mr-5 inline-flex items-center`}>About</a>
@@ -45,7 +47,8 @@ const Header = () => {
             <a role="menuitem" tabIndex={0} aria-current={pathName === '/contact' ? 'page' : undefined} className={`header-item${pathName === '/contact' ? "-active" : ""} mx-1 inline-flex items-center`}>Contact</a>
           </Link>
         </div>
-        <div className='header-hamberger'>
+        <div className='header-hamberger header-mobile-actions'>
+          <ThemeToggle className="theme-toggle-mobile" />
           <div className='hamberger'>
             <MobileSidebar />
           </div>

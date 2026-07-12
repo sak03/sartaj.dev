@@ -1,3 +1,35 @@
+.theme-toggle {
+    align-items: center;
+    // background: rgba(6, 78, 59, 0.08);
+    // border: 1px solid rgba(6, 78, 59, 0.16);
+    border-radius: 8px;
+    color: $theme-dark-text;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 18px;
+    height: 38px;
+    justify-content: center;
+    transition: all 0.2s ease;
+    width: 38px;
+}
+
+.theme-toggle:hover {
+    background: rgba(6, 78, 59, 0.14);
+    border-color: rgba(6, 78, 59, 0.3);
+    color: $theme-dark-text;
+}
+
+.theme-toggle-desktop {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.header-mobile-actions {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
 /* Mobile Stye */
 @media (max-width: 767px) {
     .header-brand {
@@ -122,6 +154,10 @@
     }
 
     .header-hamberger {
+        display: none;
+    }
+
+    .theme-toggle-mobile {
         display: none;
     }
 }

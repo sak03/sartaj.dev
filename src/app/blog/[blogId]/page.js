@@ -72,7 +72,7 @@ const BlogDetails = ({ params }) => {
 
     return (
         <main className="px-3 py-6 md:px-6 md:py-12">
-            <article className="mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-black/10 bg-white shadow-[0_22px_80px_rgba(15,23,42,0.08)]">
+            <article className="mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-border bg-card text-card-foreground shadow-[0_22px_80px_rgba(15,23,42,0.08)] dark:shadow-[0_22px_80px_rgba(0,0,0,0.35)]">
                 <div
                     className="relative overflow-hidden px-0 py-8 md:py-10"
                     style={{
@@ -117,13 +117,13 @@ const BlogDetails = ({ params }) => {
 
                 <div className="grid gap-10 px-3 py-8 md:py-10 lg:grid-cols-[240px_1fr]">
                     <aside className="lg:sticky lg:top-8 lg:self-start">
-                        <div className="mx-6 rounded-[24px] bg-black/[0.03] p-5 md:mx-8 lg:mx-0">
-                            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-black/45">
+                        <div className="mx-6 rounded-[24px] bg-muted p-5 md:mx-8 lg:mx-0">
+                            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                                 Key Takeaways
                             </p>
-                            <ul className="mt-4 space-y-3 text-sm leading-7 text-black/70">
+                            <ul className="mt-4 space-y-3 text-sm leading-7 text-muted-foreground">
                                 {blog.keyTakeaways.map((point) => (
-                                    <li key={point} className="border-b border-black/5 pb-3 last:border-b-0 last:pb-0">
+                                    <li key={point} className="border-b border-border pb-3 last:border-b-0 last:pb-0">
                                         {point}
                                     </li>
                                 ))}
@@ -140,25 +140,25 @@ const BlogDetails = ({ params }) => {
                     </aside>
 
                     <div className="px-6 md:px-8 lg:pl-0 lg:pr-10">
-                        <p className="text-lg leading-8 text-black/75">{blog.intro}</p>
+                        <p className="text-lg leading-8 text-muted-foreground">{blog.intro}</p>
 
                         <div className="mt-10 space-y-10">
                             {blog.sections.map((section) => (
                                 <section key={section.title}>
-                                    <h2 className="text-2xl font-semibold text-black md:text-3xl">{section.title}</h2>
+                                    <h2 className="text-2xl font-semibold text-foreground md:text-3xl">{section.title}</h2>
                                     <div className="mt-4 space-y-4">
                                         {section.paragraphs.map((paragraph) => (
-                                            <p key={paragraph} className="text-base leading-8 text-black/72">
+                                            <p key={paragraph} className="text-base leading-8 text-muted-foreground">
                                                 {paragraph}
                                             </p>
                                         ))}
                                     </div>
 
                                     {section.bullets ? (
-                                        <ul className="mt-5 space-y-3 rounded-[24px] bg-black/[0.03] p-5 text-base leading-7 text-black/72">
+                                        <ul className="mt-5 space-y-3 rounded-[24px] bg-muted p-5 text-base leading-7 text-muted-foreground">
                                             {section.bullets.map((bullet) => (
                                                 <li key={bullet} className="flex gap-3">
-                                                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black" />
+                                                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
                                                     <span>{bullet}</span>
                                                 </li>
                                             ))}
@@ -174,11 +174,11 @@ const BlogDetails = ({ params }) => {
                             ))}
                         </div>
 
-                        <div className="mt-12 rounded-[28px] border border-black/10 bg-[#f8f7f2] p-6 md:p-8">
-                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/45">
+                        <div className="mt-12 rounded-[28px] border border-border bg-muted p-6 md:p-8">
+                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                                 Final Thought
                             </p>
-                            <p className="mt-4 text-base leading-8 text-black/75">{blog.closing}</p>
+                            <p className="mt-4 text-base leading-8 text-muted-foreground">{blog.closing}</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@ const BlogDetails = ({ params }) => {
                         <p className="text-sm uppercase tracking-[0.2em] text-white/55">Next Read</p>
                         <p className="mt-2 text-lg font-medium">Explore more writing from the archive.</p>
                     </div>
-                    <Link href="/blogs" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black">
+                    <Link href="/blogs" className="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 text-sm font-medium text-foreground border border-border">
                         Browse all
                         <FiArrowUpRight />
                     </Link>
