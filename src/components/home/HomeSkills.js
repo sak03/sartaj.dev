@@ -2,7 +2,6 @@ import React from 'react'
 import { frontEndSkills } from '@/utils/datas/skillData'
 import Link from 'next/link'
 import { FiChevronsRight } from 'react-icons/fi'
-import Image from 'next/image'
 
 const HomeSkills = () => {
     return (
@@ -10,7 +9,7 @@ const HomeSkills = () => {
 
             <div className='flex justify-between'>
                 <h5 className='home-skill-title'>SKILLS</h5>
-                <Link href={'skills'} >
+                <Link href={'/skills'} >
                     <span className='text-black flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
                 </Link>
             </div>

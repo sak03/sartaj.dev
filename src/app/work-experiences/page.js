@@ -27,7 +27,7 @@ const WorkExperience = () => {
             </span>
             <div className="relative z-10 w-full">
               <h3 className='exp-title'>{item.companyName}</h3>
-              <p className='text-black'><small>{item.location}</small>  <small>{`${item.stDate} - ${item.endDate}`}</small></p>
+              <p className='text-black'><small>{item.location}</small>  <small>{`${item.startDate} - ${item.endDate}`}</small></p>
               <p className='text-black'>{item.shortDescription}</p>
             </div>
           </Link>

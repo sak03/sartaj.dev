@@ -1,134 +1,134 @@
-// 'use client';
-import { workData } from "@/utils/datas/workExpData";
 import Image from "next/image";
+import Link from "next/link";
+import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
+import { workData } from "@/utils/datas/workExpData";
 
 export function generateStaticParams() {
   return workData.map((experience) => ({ expId: experience.slug }));
 }
 
-const WorkExperienceDetails = ({ params }) => {
-  const { expId } = params;
-
-  const experience = workData.find(exp => exp.slug === expId);
+export function generateMetadata({ params }) {
+  const experience = workData.find((item) => item.slug === params.expId);
 
   if (!experience) {
-    return <p>Experience not found.</p>;
+    return {
+      title: "Experience Not Found | Sartaj Alam",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  return {
+    title: `${experience.companyName} | Work Experience | Sartaj Alam`,
+    description: experience.shortDescription,
+  };
+}
+
+const WorkExperienceDetails = ({ params }) => {
+  const experience = workData.find((item) => item.slug === params.expId);
+
+  if (!experience) {
+    return (
+      <div className="portfolio-page">
+        <p className="portfolio-body-text">Experience not found.</p>
+        <Link href="/work-experiences" className="portfolio-btn portfolio-btn-primary mt-5">Back to Experience</Link>
+      </div>
+    );
   }
 
   return (
-    <div className="px-6 md:px-20 py-10">
+    <div className="portfolio-page experience-detail-page">
+      <Link href="/work-experiences" className="project-back-link">
+        <FiArrowLeft aria-hidden="true" />
+        Back to experience
+      </Link>
 
-      {/* Banner */}
-      <Image
-        src={experience?.bannerUrl}
-        alt={experience?.companyName}
-        className="w-full h-60 object-cover rounded-xl mb-6"
-        width={1200}
-        height={400}
-      />
+      <section className="experience-hero">
+        <div className="experience-banner">
+          <Image
+            src={experience.bannerUrl}
+            alt={`${experience.companyName} banner`}
+            width={1200}
+            height={520}
+            className="experience-banner-image"
+            priority
+          />
+        </div>
+        <div className="experience-summary-card">
+          <Image
+            src={experience.companyLogo}
+            alt={`${experience.companyName} logo`}
+            width={96}
+            height={96}
+            className="experience-logo"
+          />
+          <p className="portfolio-eyebrow">{experience.employmentType}</p>
+          <h1>{experience.companyName}</h1>
+          <p>{experience.shortDescription}</p>
+          <div className="experience-meta-list">
+            <span>{experience.location}</span>
+            <span>{experience.startDate} - {experience.endDate}</span>
+          </div>
+          {experience.companyUrl ? (
+            <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="project-card-link">
+              Company website
+              <FiArrowUpRight aria-hidden="true" />
+            </a>
+          ) : null}
+        </div>
+      </section>
 
-      {/* Company Info */}
-      {experience?.companyUrl ? (
-        <a
-          href={experience.companyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 mb-4"
-        >
-        <Image
-          src={experience?.companyLogo}
-          alt="logo"
-          className="w-14 h-14 rounded-full"
-          width={120}
-          height={100}
-        />
+      <section className="portfolio-section project-story-grid">
+        <article className="project-story-card">
+          <p className="portfolio-eyebrow">COMPANY</p>
+          <p>{experience.aboutCompany}</p>
+        </article>
+        <article className="project-story-card">
+          <p className="portfolio-eyebrow">IMPACT</p>
+          <p>{experience.achievements?.join(". ")}.</p>
+        </article>
+        <article className="project-story-card">
+          <p className="portfolio-eyebrow">ROLE</p>
+          <p>Built, maintained, optimized, and integrated frontend/full-stack modules in production-focused workflows.</p>
+        </article>
+      </section>
+
+      <section className="portfolio-section project-detail-grid">
         <div>
-          <h1 className="text-2xl font-bold">
-            {experience?.companyName}
-          </h1>
-          <p className="text-gray-500">
-            {experience?.location} • {experience?.employmentType}
-          </p>
+          <p className="portfolio-eyebrow">RESPONSIBILITIES</p>
+          <h2 className="portfolio-section-title">What I owned</h2>
+          <ul className="project-check-list">
+            {experience.responsibilities.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
-      </a>) : (
-          <div className="flex items-center gap-4 mb-4">
-            <Image
-              src={experience?.companyLogo}
-              alt="logo"
-              className="w-14 h-14 rounded-full"
-              width={120}
-              height={100}
-            />
-            <div>
-              <h1 className="text-2xl font-bold">
-                {experience?.companyName}
-              </h1>
-              <p className="text-gray-500">
-                {experience?.location} • {experience?.employmentType}
-              </p>
-            </div>
+        <div>
+          <p className="portfolio-eyebrow">PROJECTS</p>
+          <h2 className="portfolio-section-title">Work delivered</h2>
+          <div className="experience-project-list">
+            {experience.projects.map((project) => (
+              <article key={project.name}>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className="project-card-stack">
+                  {project.tech.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
-      )}
-
-      {/* Duration */}
-      <p className="text-sm text-gray-600 mb-4">
-        {experience?.startDate} - {experience?.endDate}
-      </p>
-
-      {/* About Company */}
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">About Company</h2>
-        <p>{experience?.aboutCompany}</p>
-      </section>
-
-      {/* Responsibilities */}
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Responsibilities</h2>
-        <ul className="list-disc ml-6">
-          {experience?.responsibilities?.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Tech Stack</h2>
-        <div className="flex flex-wrap gap-2">
-          {experience?.techStack?.map((tech, i) => (
-            <span
-              key={i}
-              className="bg-gray-200 px-3 py-1 rounded-full text-sm"
-            >
-              {tech}
-            </span>
-          ))}
         </div>
       </section>
 
-      {/* Projects */}
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Projects</h2>
-        {experience?.projects?.map((proj, i) => (
-          <div key={i} className="mb-3 border p-3 rounded-lg">
-            <h3 className="font-semibold">{proj.name}</h3>
-            <p className="text-sm text-gray-600">{proj.description}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* Work Timeline */}
-      <section>
-        <h2 className="text-xl font-semibold mb-2">Work Timeline</h2>
-        <ul className="list-disc ml-6">
-          {experience?.workProgress?.map((item, i) => (
-            <li key={i}>
-              {item.title} - <span className="text-gray-500">{item.date}</span>
-            </li>
+      <section className="portfolio-section project-tech-section">
+        <p className="portfolio-eyebrow">TECH STACK</p>
+        <div className="project-tech-list">
+          {experience.techStack.map((tech) => (
+            <span key={tech}>{tech}</span>
           ))}
-        </ul>
+        </div>
       </section>
-
     </div>
   );
 };
