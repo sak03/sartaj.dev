@@ -1,30 +1,42 @@
-'use client'
-import React from 'react'
-import { blogsData } from '@/utils/datas/blogsData'
-import BlogCard from '@/components/blog/BlogCard'
+import BlogCard from "@/components/blog/BlogCard";
+import { blogPosts, SITE_URL } from "@/lib/site";
 
-const Blogs = () => {
-    return (
-        <main className='blogs-page px-3 py-6 md:px-5 md:py-12'>
-            <section className='mx-auto max-w-6xl'>
-                <div className='max-w-3xl'>
-                    <p className='text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground'>Blog Archive</p>
-                    <h1 className='mt-4 text-4xl font-semibold leading-tight text-foreground md:text-6xl'>
-                        Writing about frontend systems, product thinking, and cleaner builds.
-                    </h1>
-                    <p className='mt-5 max-w-2xl text-base leading-8 text-muted-foreground'>
-                        These posts are focused on practical learning. The goal is not just to explain concepts, but to make them easier to apply in real projects.
-                    </p>
-                </div>
+export const metadata = {
+  title: "Web Development & AI Blog",
+  description:
+    "Practical articles by Sartaj Alam about Next.js, React architecture, deployment, artificial intelligence, and building better web products.",
+  alternates: { canonical: "/blogs" },
+  openGraph: {
+    title: "Web Development & AI Blog | Sartaj Alam",
+    description: "Practical notes on modern web development, architecture, deployment, and AI.",
+    url: `${SITE_URL}/blogs`,
+  },
+};
 
-                <div className='mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3'>
-                    {blogsData.map((item) => (
-                        <BlogCard blog={item} key={item.id} compact />
-                    ))}
-                </div>
-            </section>
-        </main>
-    )
+export default function BlogsPage() {
+  return (
+    <div className="blog-archive px-4 py-10 sm:px-6 md:py-16">
+      <section className="mx-auto max-w-6xl" aria-labelledby="blog-heading">
+        <div className="grid items-end gap-8 border-b border-border pb-10 md:grid-cols-[1fr_320px] md:pb-14">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-700 dark:text-emerald-300">
+              Notes from the build
+            </p>
+            <h1 id="blog-heading" className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-foreground text-balance sm:text-6xl lg:text-7xl">
+              Clear thinking for a fast-moving web.
+            </h1>
+          </div>
+          <p className="max-w-xl text-base leading-8 text-muted-foreground md:pb-1">
+            Practical field notes about frontend architecture, reliable deployment, and the way AI is changing how we build—not recycled tutorials.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post, index) => (
+            <BlogCard blog={post} featured={index === 0} key={post.slug} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }
-
-export default Blogs

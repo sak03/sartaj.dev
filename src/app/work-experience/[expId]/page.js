@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
 import { workData } from "@/utils/datas/workExpData";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return workData.map((experience) => ({ expId: experience.slug }));
@@ -18,8 +19,15 @@ export function generateMetadata({ params }) {
   }
 
   return {
-    title: `${experience.companyName} | Work Experience | Sartaj Alam`,
+    title: `${experience.companyName} — Work Experience`,
     description: experience.shortDescription,
+    alternates: { canonical: `${SITE_URL}/work-experience/${experience.slug}` },
+    openGraph: {
+      title: `${experience.companyName} — Work Experience`,
+      description: experience.shortDescription,
+      url: `${SITE_URL}/work-experience/${experience.slug}`,
+      type: "profile",
+    },
   };
 }
 

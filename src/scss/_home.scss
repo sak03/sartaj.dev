@@ -4,7 +4,7 @@
         display: flex;
         flex-direction: column;
         background-color: #fff;
-        padding: 10px 10px;
+        padding: 28px 20px 40px;
     }
 
     .landing-section1 {
@@ -14,11 +14,11 @@
     .landing-section2 {
         width: 100%;
         color: $dark-text;
-        padding: 30px 10px 10px 10px;
+        padding: 12px 0 0;
     }
 
     .landing-section2 h1 {
-        font-size: 18px;
+        font-size: 34px;
         font-weight: 600;
     }
 
@@ -228,21 +228,21 @@
         display: flex;
         justify-content: space-between;
         background-color: #fff;
-        padding: 10px 80px;
+        padding: 36px 40px;
     }
 
     .landing-section1 {
-        width: 35%;
+        width: 42%;
     }
 
     .landing-section2 {
-        width: 65%;
+        width: 58%;
         color: $dark-text;
         padding: 30px 10px;
     }
 
     .landing-section2 h1 {
-        font-size: 18px;
+        font-size: 36px;
         font-weight: 600;
     }
 
@@ -261,17 +261,17 @@
         display: flex;
         // justify-content: space-between;
         background-color: #fff;
-        padding: 10px 80px;
+        padding: 48px clamp(48px, 7vw, 120px) 64px;
     }
 
     .landing-section1 {
-        width: 40%;
+        width: 44%;
     }
 
     .landing-section2 {
-        width: 60%;
+        width: 56%;
         color: $dark-text;
-        padding: 30px 50px;
+        padding: 20px 0;
     }
 
     .landing-section2 h1 {

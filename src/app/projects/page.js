@@ -1,6 +1,12 @@
 import ProjectCard from '@/components/project/ProjectCard';
 import { personalProjectsData, corporateProjectsData } from '@/utils/datas/projectsData';
 
+export const metadata = {
+    title: 'Web Development Projects',
+    description: 'Explore selected frontend and full stack projects by Sartaj Alam, including responsive React, Next.js, and production web application work.',
+    alternates: { canonical: '/projects' },
+};
+
 const Projects = () => {
     return (
         <div className='portfolio-page projects-page'>

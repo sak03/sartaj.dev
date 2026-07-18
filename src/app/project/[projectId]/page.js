@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowLeft, FiArrowUpRight, FiGithub } from 'react-icons/fi';
 import { personalProjectsData, corporateProjectsData } from '@/utils/datas/projectsData';
+import { SITE_URL } from '@/lib/site';
 
 const allProjects = [...personalProjectsData, ...corporateProjectsData];
 
@@ -22,8 +23,15 @@ export function generateMetadata({ params }) {
     }
 
     return {
-        title: `${project.name} | Project Case Study | Sartaj Alam`,
+        title: `${project.name} — Project Case Study`,
         description: project.shortDescription,
+        alternates: { canonical: `${SITE_URL}/project/${project.id}` },
+        openGraph: {
+            title: `${project.name} — Project Case Study`,
+            description: project.shortDescription,
+            url: `${SITE_URL}/project/${project.id}`,
+            type: 'article',
+        },
     };
 }
 

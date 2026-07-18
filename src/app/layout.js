@@ -1,154 +1,156 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "../scss/style.scss"
+import "../scss/style.scss";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SITE_URL, siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
-    title: "Sartaj Alam | Web Developer", // Page title
-    description: "Web developer, ReactJS developer, NextJS developer, Front end developer, Full stack developer, MERN Stack developer.", // Page description
-    openGraph: {
-        title: "Sartaj Alam | Web Developer", // Title for social media
-        description: "A portfolio showcasing my web development journey.", // Description for social media
-        url: "https://sak03.github.io/sartaj.dev/", // URL of your portfolio
-        siteName: "Sartaj's Portfolio", // Site name
-        images: [
-            {
-                url: "https://sak03.github.io/sartaj.dev/og-image.jpg", // Social media preview image
-                width: 1200,
-                height: 630,
-                alt: "Sartaj Alam Portfolio Preview", // Alt text for the image
-            },
-        ],
-        locale: "en_US", // Locale, e.g., 'en_US' for English (United States)
-        type: "website", // Type of content, e.g., 'website', 'article'
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Sartaj Alam",
+  },
+  description: siteConfig.description,
+  applicationName: "Sartaj Alam Portfolio",
+  authors: [{ name: siteConfig.name, url: SITE_URL }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "technology",
+  keywords: [
+    "Sartaj Alam",
+    "full stack web developer",
+    "Next.js developer",
+    "React developer",
+    "Laravel developer",
+    "frontend developer India",
+    "web developer portfolio",
+  ],
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": `${SITE_URL}/feed.xml` },
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: SITE_URL,
+    siteName: "Sartaj Alam Portfolio",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Sartaj Alam — Full Stack Web Developer",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ["/og.png"],
+    creator: "@sartaj_03",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-    // Twitter Metadata (for Twitter cards)
-    twitter: {
-        card: "summary_large_image", // Card type: 'summary', 'summary_large_image', 'app', or 'player'
-        title: "Sartaj Alam | Web Developer", // Title for Twitter card
-        description: "A portfolio showcasing my web development journey.", // Description for Twitter card
-        images: ["https://sak03.github.io/sartaj.dev/twitter-image.jpg"], // Image URL for Twitter card
-        creator: "@sartaj_03", // Your Twitter handle
-    },
-    // LinkedIn Metadata
-    linkedIn: {
-        title: "Sartaj Alam | Web Developer", // Title for LinkedIn preview
-        description: "A portfolio showcasing my web development journey.", // Description for LinkedIn preview
-        images: ["https://sak03.github.io/sartaj.dev/linkedin-image.jpg"], // Image URL for LinkedIn preview
-        url: "https://www.linkedin.com/in/sak03", // Your LinkedIn profile URL
-    },
-
-    // GitHub Metadata
-    github: {
-        title: "Sartaj Alam | Web Developer", // Title for GitHub preview
-        description: "A portfolio showcasing my web development journey.", // Description for GitHub preview
-        images: ["https://sak03.github.io/sartaj.dev/github-image.jpg"], // Image URL for GitHub preview
-        url: "https://github.com/sak03", // Your GitHub profile URL
-    },
-    // Icons
-    icons: {
-        icon: "/favicon.ico", // Path to favicon
-        shortcut: "/favicon.ico", // Shortcut icon
-        apple: "/favicon.png", // Apple touch icon
-        other: [
-            {
-                rel: "manifest",
-                url: "/site.webmanifest", // Web app manifest file
-            },
-        ],
-    },
-    // Robots Metadata (SEO)
-    robots: {
-        index: true, // Allow indexing
-        follow: true, // Allow following links
-        nocache: false, // Prevent caching (optional)
-        googleBot: {
-            index: true, // Google bot-specific indexing
-            follow: true, // Google bot-specific following
-            noimageindex: false, // Allow image indexing
-            "max-video-preview": -1, // Maximum video preview length (-1 for no limit)
-            "max-image-preview": "large", // Maximum image preview size
-            "max-snippet": -1, // Maximum snippet length (-1 for no limit)
-        },
-    },
-    // Verification Metadata
-    verification: {
-        google: "your-google-verification-code", // Google Search Console verification
-        bing: "your-bing-verification-code", // Bing Webmaster Tools verification
-        yandex: "your-yandex-verification-code", // Yandex verification
-        other: {
-            name: "custom-verification", // Custom verification name
-            content: "your-custom-verification-code", // Custom verification content
-        },
-    },
-    // Other Metadata
-    // themeColor: "#ffffff", // Theme color for the browser (e.g., mobile browser header)
-    // viewport: "width=device-width, initial-scale=1.0", // Viewport settings for responsive design
-
-    charset: "utf-8", // Character encoding for the page
-    language: "en", // Language of the page content
-
-    author: "Sartaj Alam", // Author of the page
-    keywords: ["portfolio", "web developer", "React", "Next.js", "JavaScript", "NodeJS", "MongoDB", "ExpressJS", "Redux", "Redux Toolkit"], // Keywords for SEO
-    generator: "Next.js", // The tool used to generate the page
-    applicationName: "Sartaj Alam's Portfolio", // Name of your application
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
+  icons: { icon: "/favicon.ico" },
+  manifest: "/manifest.webmanifest",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#07110d" },
+  ],
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: siteConfig.name,
+      url: SITE_URL,
+      jobTitle: "Full Stack Web Developer",
+      email: `mailto:${siteConfig.email}`,
+      sameAs: Object.values(siteConfig.social),
+      knowsAbout: ["Next.js", "React", "Laravel", "Node.js", "JavaScript", "Web Development"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Sartaj Alam Portfolio",
+      description: siteConfig.description,
+      inLanguage: "en-IN",
+      author: { "@id": `${SITE_URL}/#person` },
+    },
+  ],
+};
 
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en" suppressHydrationWarning>
-            <head>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function () {
-                                try {
-                                    var storedTheme = localStorage.getItem('theme');
-                                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                                    var theme = storedTheme || (prefersDark ? 'dark' : 'light');
-                                    if (theme === 'dark') {
-                                        document.documentElement.classList.add('dark');
-                                    }
-                                } catch (e) {}
-                            })();
-                        `,
-                    }}
-                />
-            </head>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                <ThemeProvider>
-                    {/* Skip to content link for accessibility */}
-                    <a href="#main-content" className="sr-only focus:not-sr-only skip-to-content-link" tabIndex={0}>
-                      Skip to main content
-                    </a>
-                    <div className="layout-body">
-                        <div className="layout-header">
-                            <Header />
-                        </div>
-                        <main id="main-content" className="layout-section main-content-centered" tabIndex={-1}>
-                            {children}
-                        </main>
-                        <div className="layout-footer">
-                            <Footer />
-                        </div>
-                    </div>
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en-IN" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;var t=s||(p?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}})();`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider>
+          <a href="#main-content" className="sr-only focus:not-sr-only skip-to-content-link">
+            Skip to main content
+          </a>
+          <div className="layout-body">
+            <div className="layout-header"><Header /></div>
+            <main id="main-content" className="layout-section" tabIndex={-1}>
+              {children}
+            </main>
+            <div className="layout-footer"><Footer /></div>
+          </div>
+        </ThemeProvider>
+        <GoogleAnalytics />
+      </body>
+    </html>
+  );
 }

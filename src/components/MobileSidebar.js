@@ -12,7 +12,7 @@ const getSidebarLinkClass = (isActive) =>
 
 const MobileSidebar = () => {
     const pathName = usePathname();
-    const hideCenterNav = pathName?.startsWith('/blog/');
+    const hideCenterNav = pathName?.startsWith('/blogs/');
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {

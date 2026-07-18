@@ -19,7 +19,7 @@ const HomeSkills = () => {
                     <span className='text-foreground flex pointer'><u>See All</u><FiChevronsRight className='my-0 text-2xl' /></span>
                 </Link>
             </div>
-            <h3 className='home-skill-subtitle'>I'm Proficient In</h3>
+            <h3 className='home-skill-subtitle'>I&apos;m Proficient In</h3>
             <div className='home-skill-card-body flex flex-col'>
                 {frontEndSkills?.slice(0,5)?.map((item) => {
                     return(
