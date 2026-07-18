@@ -1,6 +1,12 @@
 import React from 'react';
 import { frontEndSkills, backEndSkills, databaseSkills } from '@/utils/datas/skillData';
 
+export const metadata = {
+    title: 'Technical Skills',
+    description: 'Technical skills of Sartaj Alam across React, Next.js, Laravel, Node.js, databases, responsive UI, and modern web development.',
+    alternates: { canonical: '/skills' },
+};
+
 const skillCardClass =
     "relative home-skill-card flex items-center min-h-[120px] p-6 bg-card border border-border text-card-foreground rounded-xl shadow-md mb-6 overflow-visible w-full group cursor-pointer transition-colors";
 
@@ -32,7 +38,7 @@ const Skills = () => {
             <div className='mt-8'>
                 <h5 className='home-skill-title'>SKILLS</h5>
             </div>
-            <h3 className='home-skill-subtitle'>I'm Proficient In</h3>
+            <h3 className='home-skill-subtitle'>I&apos;m Proficient In</h3>
 
             <h3 className='text-3xl my-3 text-emerald-600 dark:text-emerald-300'>Front End Skills</h3>
             <div className='home-skill-card-body flex flex-col'>

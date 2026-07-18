@@ -1,47 +1,47 @@
-import Link from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
-const BlogCard = ({ blog, compact = false }) => {
-    return (
-        <Link
-            href={`/blog/${blog.slug}`}
-            className={`group overflow-hidden rounded-[28px] border border-border bg-card text-card-foreground shadow-[0_16px_48px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)] dark:shadow-[0_16px_48px_rgba(0,0,0,0.35)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)] ${compact ? '' : ''}`}
-        >
-            <div
-                className={`relative flex flex-col justify-between ${compact ? 'min-h-[148px] p-5' : 'min-h-[160px] p-5 md:p-6'}`}
-                style={{
-                    background: `linear-gradient(135deg, ${blog.coverPalette.from}, ${blog.coverPalette.to})`,
-                }}
-            >
-                <div className='relative z-10'>
-                    <h3 className={`mt-3 max-w-[14rem] font-semibold leading-tight text-white ${compact ? 'text-xl' : 'text-2xl'}`}>
-                        {blog.coverLabel}
-                    </h3>
-                </div>
-                <p className='text-xs uppercase tracking-[0.18em] text-white/75'>{blog.readTime}</p>
-                <div
-                    className={`pointer-events-none absolute font-black leading-none opacity-20 ${compact ? '-bottom-7 -right-2 text-[4.5rem]' : '-bottom-8 right-0 text-[5rem]'}`}
-                    style={{ color: blog.coverPalette.accent }}
-                    aria-hidden='true'
-                >
-                    {blog.id.replace('blog', '')}
-                </div>
+export default function BlogCard({ blog, featured = false }) {
+  return (
+    <article className={`group h-full ${featured ? "md:col-span-2" : ""}`}>
+      <Link
+        href={`/blogs/${blog.slug}`}
+        className={`flex h-full overflow-hidden rounded-[26px] border border-border bg-card text-card-foreground transition duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_24px_70px_rgba(4,120,87,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${featured ? "min-h-[430px] flex-col md:grid md:grid-cols-[1.05fr_.95fr]" : "flex-col"}`}
+      >
+        <div className={`relative isolate overflow-hidden bg-gradient-to-br ${blog.palette} ${featured ? "min-h-[240px] md:min-h-full" : "min-h-[210px]"}`}>
+          <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:32px_32px]" />
+          <div className="absolute -bottom-12 -right-4 h-44 w-44 rounded-full border border-white/20 bg-white/10 blur-[1px]" />
+          <div className="relative flex h-full min-h-[inherit] flex-col justify-between p-6 md:p-8">
+            <div className="flex items-center justify-between gap-4">
+              <span className="rounded-full border border-white/20 bg-black/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
+                {blog.category}
+              </span>
+              <span className="font-mono text-sm text-white/65">/{blog.index}</span>
             </div>
+            <p className={`max-w-sm font-semibold leading-[1.05] text-white ${featured ? "text-4xl md:text-5xl" : "text-3xl"}`}>
+              {featured ? "Ideas for people who build the web." : blog.category}
+            </p>
+          </div>
+        </div>
 
-            <div className={`${compact ? 'p-5' : 'p-5 md:p-6'}`}>
-                <div className='flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-muted-foreground'>
-                    <span>{blog.date}</span>
-                    <span>{blog.author}</span>
-                </div>
-                <h4 className={`mt-3 font-semibold leading-snug text-foreground ${compact ? 'text-lg' : 'text-xl md:text-2xl'}`}>
-                    {blog.title}
-                </h4>
-                <p className={`mt-3 text-muted-foreground ${compact ? 'line-clamp-3 text-sm leading-6' : 'line-clamp-3 text-sm md:text-base leading-7'}`}>
-                    {blog.shortDescription}
-                </p>
-            </div>
-        </Link>
-    )
+        <div className={`flex flex-1 flex-col p-6 ${featured ? "justify-center md:p-9" : "md:p-7"}`}>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
+            <time dateTime={blog.date}>{blog.dateLabel}</time>
+            <span aria-hidden="true">•</span>
+            <span>{blog.readTime}</span>
+          </div>
+          <h2 className={`mt-4 font-semibold leading-tight text-foreground text-balance ${featured ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+            {blog.title}
+          </h2>
+          <p className="mt-4 line-clamp-3 text-[15px] leading-7 text-muted-foreground">
+            {blog.excerpt}
+          </p>
+          <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+            Read article
+            <FiArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+          </span>
+        </div>
+      </Link>
+    </article>
+  );
 }
-
-export default BlogCard

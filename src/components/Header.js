@@ -7,7 +7,7 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const pathName = usePathname();
-  const hideCenterNav = pathName?.startsWith('/blog/');
+  const hideCenterNav = pathName?.startsWith('/blogs/');
   // console.log("pathName", pathName)
   return (
     <header className='header-brand' role="banner" aria-label="Site Header">

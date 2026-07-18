@@ -101,7 +101,8 @@ html.dark .work-title {
 
 html.dark .work-subtitle,
 html.dark .home-project-subtitle,
-html.dark .home-skill-subtitle {
+html.dark .home-skill-subtitle,
+html.dark .landing-copy-panel h1 span {
     color: $theme-light-text;
 }
 
@@ -224,13 +225,22 @@ html.dark .contact-link-card:hover {
     background: rgba(110, 231, 183, 0.14);
 }
 
-html.dark .landing-availability {
-    background: #16211d;
-    border-color: rgba(110, 231, 183, 0.2);
+html.dark .landing-visual-panel {
+    background: linear-gradient(145deg, #16211d 0%, #111a17 75%);
+    border-color: rgba(110, 231, 183, 0.12);
+}
+
+html.dark .landing-visual-kicker {
     color: $theme-light-text;
 }
 
-html.dark .landing-visual-panel img {
+html.dark .landing-visual-stack span {
+    background: rgba(7, 17, 13, 0.68);
+    border-color: rgba(110, 231, 183, 0.16);
+    color: $theme-light-text;
+}
+
+html.dark .landing-image-frame img {
     box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
 }
 

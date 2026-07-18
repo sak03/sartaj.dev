@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='footer-pro' role="contentinfo" aria-label="Site Footer">
       <div className='footer-cta'>
         <div>
-          <p className='portfolio-eyebrow'>LET'S BUILD</p>
+          <p className='portfolio-eyebrow'>LET&apos;S BUILD</p>
           <h2>Need a clean portfolio, frontend, or full-stack web app?</h2>
         </div>
         <Link href='/contact' className='portfolio-btn portfolio-btn-primary'>

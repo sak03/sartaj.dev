@@ -1,6 +1,12 @@
 import ContactForm from '@/components/contact/ContactForm';
 import { FaEnvelope, FaGithubSquare, FaLinkedin, FaPhoneAlt, FaTwitterSquare, FaWhatsapp } from 'react-icons/fa';
 
+export const metadata = {
+    title: 'Contact',
+    description: 'Contact Sartaj Alam for full stack development, frontend engineering, freelance projects, or web product opportunities.',
+    alternates: { canonical: '/contact' },
+};
+
 const contactLinks = [
     {
         label: 'Email',

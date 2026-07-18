@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { blogsData } from '@/utils/datas/blogsData'
+import { blogPosts } from '@/lib/site'
 import Link from 'next/link'
 import { FiChevronsRight } from 'react-icons/fi'
 import BlogCard from '@/components/blog/BlogCard'
@@ -20,8 +20,8 @@ const HomeBlogs = () => {
             <h3 className='home-project-subtitle'>My Latest Blogs</h3>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10'>
-                {blogsData.slice(0, 3).map((item) => (
-                    <BlogCard blog={item} key={item.id} compact />
+                {blogPosts.slice(0, 3).map((item) => (
+                    <BlogCard blog={item} key={item.slug} />
                 ))}
             </div>
 

@@ -3,6 +3,12 @@ import React from 'react';
 import { workData } from "@/utils/datas/workExpData";
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Work Experience',
+  description: 'Professional experience of Sartaj Alam building frontend and full stack web applications with Next.js, React, Laravel, and Livewire.',
+  alternates: { canonical: '/work-experiences' },
+};
+
 const workCardClass =
   "relative flex items-center w-full min-h-[160px] p-8 bg-card border border-border text-card-foreground rounded-xl shadow-md mb-6 overflow-visible group cursor-pointer transition-colors";
 

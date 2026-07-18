@@ -2,6 +2,12 @@ import Link from 'next/link';
 import { FaCode, FaLayerGroup, FaRocket, FaServer } from 'react-icons/fa';
 import { SiLaravel, SiNextdotjs, SiReact } from 'react-icons/si';
 
+export const metadata = {
+    title: 'About — Full Stack Developer',
+    description: 'Learn about Sartaj Alam, a full stack developer focused on React, Next.js, Laravel, accessible UI, and maintainable product engineering.',
+    alternates: { canonical: '/about' },
+};
+
 const highlights = [
     {
         title: 'Frontend Craft',
