@@ -2,6 +2,8 @@ import { SITE_URL, blogPosts } from "@/lib/site";
 import { personalProjectsData, corporateProjectsData } from "@/utils/datas/projectsData";
 import { workData } from "@/utils/datas/workExpData";
 
+export const dynamic = "force-static";
+
 const staticRoutes = [
   "",
   "/about",
