@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 export default function manifest() {
   return {
     name: "Sartaj Alam — Full Stack Web Developer",
