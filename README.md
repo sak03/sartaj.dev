@@ -77,6 +77,8 @@ Use `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` for the GA4 measurement ID.
 4. Select the Web stream for `sartajalam.in`.
 5. Copy the Measurement ID, usually like `G-XXXXXXXXXX`.
 
+This project already has `G-PVNFWHGN9B` as the default measurement ID in `src/components/GoogleAnalytics.js`. Adding `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` in GitHub Actions variables is still useful if the ID changes later.
+
 ### Google Search Console Verification
 
 Use `GOOGLE_SITE_VERIFICATION` for the value inside Google's HTML meta tag.
@@ -135,3 +137,5 @@ BING_SITE_VERIFICATION
 The workflow in `.github/workflows/nextjs.yml` passes these variables into the Next.js build step. After updating variables, rerun the GitHub Pages workflow or push to the `prod` branch.
 
 For local development, copy `.env.example` to `.env.local` and add the same values there.
+
+`GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION` are optional. If they are empty, deployment will still work; the site just will not include those verification meta tags until values are added.
