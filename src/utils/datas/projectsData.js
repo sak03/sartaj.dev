@@ -2,6 +2,7 @@ import publicLibraryImg from '../../assets/projects/personal/public-library.png'
 import tictactoeImg from '../../assets/projects/personal/tictactoe.png';
 import devtoolsImg from '../../assets/projects/personal/devtools.png';
 import resumeLabImg from '../../assets/projects/personal/resume-lab.png';
+import wordChainImg from '../../assets/projects/personal/word-chain.png';
 
 export const personalProjectsData = [
     {
@@ -82,6 +83,46 @@ export const personalProjectsData = [
             { label: "Status", value: "Live" },
             { label: "Templates", value: "6" },
             { label: "Privacy", value: "Browser-only" },
+        ],
+    },
+    {
+        id: "pp06",
+        slug: "word-chain-challenge",
+        name: "Word Chain Challenge",
+        type: "Personal Project",
+        imgUrl: wordChainImg,
+        repoUrl: "",
+        liveUrl: "https://wordchain.sartajalam.in",
+        stDate: "2026",
+        endDate: "Present",
+        role: "Frontend Developer",
+        status: "Live",
+        shortDescription:
+            "A friendly word-chain game — play solo with WordBot or take turns with a friend, all in the browser.",
+        longDescription:
+            "Word Chain Challenge is a quick word-linking game for curious minds. Pick a mode, add your name, and keep the chain alive: each word must start from the previous ending. Play solo against WordBot or pass turns with a friend. Scoring is simple (+1 correct, −1 pass), and the game stays only on the device.",
+        problem:
+            "Casual word games often feel heavy with accounts, ads, or confusing rules. Players need a light challenge that is easy to start and fun to share on one device.",
+        solution:
+            "I built a clear two-step setup — choose solo or friend mode, enter a name, then start — with readable scoring, light/dark theme, and local-only play so nothing needs a backend.",
+        outcome:
+            "Shipped a live game at wordchain.sartajalam.in with solo and friend modes, device-local play, and a clean challenge-focused UI.",
+        techStack: ["Next.js", "React", "JavaScript", "CSS"],
+        features: [
+            "Solo play with WordBot or friend turn-taking",
+            "Simple scoring for correct words and passes",
+            "Light and dark theme toggle",
+            "Game state stays on this device only",
+        ],
+        responsibilities: [
+            "Designed the landing and game setup UX",
+            "Implemented play modes and scoring feedback",
+            "Shipped and hosted the live game",
+        ],
+        metrics: [
+            { label: "Status", value: "Live" },
+            { label: "Modes", value: "Solo + Friend" },
+            { label: "Privacy", value: "Device-local" },
         ],
     },
     {

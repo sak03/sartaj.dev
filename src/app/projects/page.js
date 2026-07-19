@@ -19,7 +19,7 @@ const Projects = () => {
                     </p>
                 </div>
                 <div className='projects-hero-panel'>
-                    <span>6</span>
+                    <span>7</span>
                     <strong>Case studies</strong>
                     <p>Personal builds and professional work examples.</p>
                 </div>
