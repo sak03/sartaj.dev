@@ -1,7 +1,89 @@
 import publicLibraryImg from '../../assets/projects/personal/public-library.png';
 import tictactoeImg from '../../assets/projects/personal/tictactoe.png';
+import devtoolsImg from '../../assets/projects/personal/devtools.png';
+import resumeLabImg from '../../assets/projects/personal/resume-lab.png';
 
 export const personalProjectsData = [
+    {
+        id: "pp04",
+        slug: "devtools",
+        name: "DevTools",
+        type: "Personal Project",
+        imgUrl: devtoolsImg,
+        repoUrl: "",
+        liveUrl: "https://devtools.sartajalam.in",
+        stDate: "2026",
+        endDate: "Present",
+        role: "Full Stack Developer",
+        status: "Live",
+        shortDescription:
+            "A private browser workspace with 25+ everyday developer utilities — format, encode, and decode without leaving the tab.",
+        longDescription:
+            "DevTools is a free collection of client-side developer utilities built for speed and privacy. Transforms run instantly in the browser, search is keyboard-first, and pasted data never leaves the tab. It covers encode/decode, formatters, text tools, timestamps, hashing, and more in one dense IDE-style workspace.",
+        problem:
+            "Developers bounce between scattered online tools that often upload input to a server. Everyday tasks like Base64, JSON format, JWT inspect, and diff need to stay fast and private.",
+        solution:
+            "I built a single private workspace where every utility runs locally, with ⌘K search, clear shortcuts, and a consistent UI so switching tools feels instant and trustworthy.",
+        outcome:
+            "Shipped a live product at devtools.sartajalam.in with 25 tools, privacy-first processing, and a keyboard-driven developer experience.",
+        techStack: ["Next.js", "React", "JavaScript", "CSS"],
+        features: [
+            "25+ browser-only developer utilities",
+            "Encode/decode, formatters, and text tools",
+            "Keyboard-first search (⌘K)",
+            "Local-only processing — nothing uploaded",
+        ],
+        responsibilities: [
+            "Designed and built the full product UI",
+            "Implemented client-side tool logic and search",
+            "Shipped and hosted the live site",
+        ],
+        metrics: [
+            { label: "Status", value: "Live" },
+            { label: "Tools", value: "25+" },
+            { label: "Privacy", value: "Local-only" },
+        ],
+    },
+    {
+        id: "pp05",
+        slug: "resume-lab",
+        name: "Resume Lab",
+        type: "Personal Project",
+        imgUrl: resumeLabImg,
+        repoUrl: "",
+        liveUrl: "https://resume.sartajalam.in",
+        stDate: "2026",
+        endDate: "Present",
+        role: "Full Stack Developer",
+        status: "Live",
+        shortDescription:
+            "A free browser resume builder and CV maker with live preview, multiple templates, and one-click PDF export — no account required.",
+        longDescription:
+            "Resume Lab lets you choose a template, fill in details, preview live, and export a clean PDF entirely in the browser. Drafts stay in local storage, nothing is uploaded to a server, and six templates cover simple, medium, advanced, and custom layouts.",
+        problem:
+            "Many resume builders require accounts, store personal data on servers, or add friction before a usable PDF. Job seekers need a fast, private path from draft to print-ready resume.",
+        solution:
+            "I built a privacy-first builder with local drafts, live A4 preview, multiple templates, and PDF download via the browser print dialog — no signup and no database.",
+        outcome:
+            "Shipped a live free product at resume.sartajalam.in with six templates, browser-only drafts, and job-ready PDF export.",
+        techStack: ["Next.js", "React", "JavaScript", "CSS"],
+        features: [
+            "Six resume/CV templates",
+            "Live preview while editing",
+            "Local storage drafts — clear anytime",
+            "Print-optimized A4 PDF export",
+        ],
+        responsibilities: [
+            "Designed the builder UX and template system",
+            "Implemented draft persistence and PDF export flow",
+            "Shipped and hosted the live site",
+        ],
+        metrics: [
+            { label: "Status", value: "Live" },
+            { label: "Templates", value: "6" },
+            { label: "Privacy", value: "Browser-only" },
+        ],
+    },
     {
         id: "pp01",
         slug: "student-registration",
