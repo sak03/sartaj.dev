@@ -3,6 +3,7 @@ import tictactoeImg from '../../assets/projects/personal/tictactoe.png';
 import devtoolsImg from '../../assets/projects/personal/devtools.png';
 import resumeLabImg from '../../assets/projects/personal/resume-lab.png';
 import wordChainImg from '../../assets/projects/personal/word-chain.png';
+import rajaMantriImg from '../../assets/projects/personal/raja-mantri.png';
 
 export const personalProjectsData = [
     {
@@ -112,6 +113,47 @@ export const personalProjectsData = [
             "Solo play with WordBot or friend turn-taking",
             "Simple scoring for correct words and passes",
             "Light and dark theme toggle",
+            "Game state stays on this device only",
+        ],
+        responsibilities: [
+            "Designed the landing and game setup UX",
+            "Implemented play modes and scoring feedback",
+            "Shipped and hosted the live game",
+        ],
+        metrics: [
+            { label: "Status", value: "Live" },
+            { label: "Modes", value: "Solo + Friend" },
+            { label: "Privacy", value: "Device-local" },
+        ],
+    },
+    {
+        id: "pp07",
+        slug: "raja-mantri-sipahi-chor",
+        name: "Raja Mantri Sipahi Chor",
+        type: "Personal Project",
+        imgUrl: rajaMantriImg,
+        repoUrl: "",
+        liveUrl: "https://rajamantri.sartajalam.in",
+        stDate: "2026",
+        endDate: "Present",
+        role: "Frontend Developer",
+        status: "Live",
+        shortDescription:
+            "A friendly raja mantri game — play solo with Bots or take turns with a friend, all in the browser.",
+        longDescription:
+            "Raja Mantri Sipahi Chor is a quick raja mantri game for curious minds. Add your name along with a friend's name and find the chor. Each round must start from the previous ending. Play solo against Bots or pass turns with a friend. Scoring is simple (Raja:1000, mantri:800, sipahi:500, chor:0), and the game stays only on the device.",
+        problem:
+            "Casual raja mantri games often feel heavy with accounts, ads, or confusing rules. Players need a light challenge that is easy to start and fun to share on one device.",
+        solution:
+            "I built a clear two-step setup — choose solo or friend mode, enter a name, then start — with readable scoring, light/dark theme, and hindi english localization for a better user experience.",
+        outcome:
+            "Shipped a live game at rajamantri.sartajalam.in with solo and friend modes, device-local play, and a clean challenge-focused UI.",
+        techStack: ["Next.js", "React", "JavaScript", "CSS", "Telwind CSS"],
+        features: [
+            "Solo play with Bots or friend turn-taking",
+            "Simple scoring for correct chits and passes",
+            "Light and dark theme toggle",
+            "English and Hindi localization",
             "Game state stays on this device only",
         ],
         responsibilities: [
