@@ -214,11 +214,11 @@ export const personalProjectsData = [
         type: "Personal Project",
         imgUrl: tictactoeImg,
         repoUrl: "",
-        liveUrl: "",
+        liveUrl: "https://sak03.github.io/react-tictactoe/",
         stDate: "Jul 2023",
         endDate: "Aug 2023",
         role: "Frontend Developer",
-        status: "Playable UI",
+        status: "Live",
         shortDescription:
             "A compact interactive game built to practice state management, turn handling, and simple game logic in React.",
         longDescription:
