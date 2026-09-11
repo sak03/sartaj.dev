@@ -69,7 +69,7 @@ const Landing = () => {
                     </Link>
                     <a
                         className='portfolio-btn portfolio-btn-secondary'
-                        href='https://drive.google.com/file/d/11_B2NTzYyvlynrw9XSXtQIRMGbR8STKx/view'
+                        href='https://drive.google.com/file/d/1Cjqh4rsj7iniIqT4Yduf3MAjh8FpXZaa/view?usp=drive_link'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
